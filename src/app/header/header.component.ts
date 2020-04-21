@@ -11,6 +11,9 @@ import { ThemePalette } from '@angular/material/core';
 export class HeaderComponent implements OnInit {
   color: ThemePalette = 'accent';
 
+  worldStatsLabel: string;
+  statsByCountryLabel: string;
+
  
 
 
@@ -18,16 +21,18 @@ export class HeaderComponent implements OnInit {
 
   constructor() { 
     this.currentMode = Modes.LightMode;
+    this.worldStatsLabel = 'World statistics';
+    this.statsByCountryLabel = "Stats by country";
   }
 
   ngOnInit(): void {
   }
 
   changeMode(){
-    if (this.currentMode == Modes.LightMode){
+    if (this.currentMode === Modes.LightMode){
       this.currentMode = Modes.DarkMode;
     } else {
-      this.currentMode == Modes.LightMode;
+      this.currentMode = Modes.LightMode;
     }
 
   }
