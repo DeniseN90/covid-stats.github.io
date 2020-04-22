@@ -12,16 +12,16 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ worldStatsLabel }}</a>
+              <a class="nav-link" [routerLink]="['world-stats']" >{{ worldStatsLabel }}</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">{{ statsByCountryLabel}}</a>
+              <a class="nav-link" [routerLink]="['countries-stats']">{{ statsByCountryLabel}}</a>
             </li>
           </ul>
         </div>
         <div>
-          <mat-slide-toggle class="p-3, m-3" [color]="color" [checked]="true" (toggleChange)="changeMode()"
-        >{{ currentMode }}</mat-slide-toggle
+          <mat-slide-toggle class="p-3, m-3" [color]="color" (toggleChange)="changeMode()"
+        >Switch to {{ otherMode }}</mat-slide-toggle
       >
         </div>
       </nav>

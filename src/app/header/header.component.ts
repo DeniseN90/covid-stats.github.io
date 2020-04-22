@@ -4,43 +4,37 @@ import { ThemePalette } from '@angular/material/core';
 @Component({
   selector: 'header-component',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
-
-
 export class HeaderComponent implements OnInit {
-  color: ThemePalette = 'accent';
+  color: ThemePalette = 'primary';
 
   worldStatsLabel: string;
   statsByCountryLabel: string;
 
- 
-
-
+  otherMode: string;
   currentMode: string;
 
-  constructor() { 
+  constructor() {
     this.currentMode = Modes.LightMode;
+    this.otherMode = Modes.DarkMode;
     this.worldStatsLabel = 'World statistics';
-    this.statsByCountryLabel = "Stats by country";
+    this.statsByCountryLabel = 'Stats by country';
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  changeMode(){
-    if (this.currentMode === Modes.LightMode){
+  changeMode() {
+    this.otherMode = this.currentMode;
+
+    if (this.currentMode === Modes.LightMode) {
       this.currentMode = Modes.DarkMode;
     } else {
       this.currentMode = Modes.LightMode;
     }
-
   }
-
- 
-
 }
 enum Modes {
   LightMode = 'Light Mode',
-  DarkMode = "Dark Mode"
+  DarkMode = 'Dark Mode',
 }
