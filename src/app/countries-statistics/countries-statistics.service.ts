@@ -1,0 +1,18 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({ providedIn: 'root' })
+export class CountriesStatisticsService {
+  constructor(private http: HttpClient) { }
+
+  headers =  {
+    'x-rapidapi-host': 'covid-193.p.rapidapi.com',
+    'x-rapidapi-key': '41644c2f8cmsh4fcb03bb7b5648ap193587jsn102b4f01579c'
+}
+
+
+  getCountriesStats(){
+    const requestOptions = { headers: this.headers };
+      return this.http.get<any>('https://covid-193.p.rapidapi.com/history',  requestOptions );
+  }
+}
