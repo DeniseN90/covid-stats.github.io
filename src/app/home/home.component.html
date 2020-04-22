@@ -1,7 +1,9 @@
-<h1>HOME</h1>
+<div class="container-fluid">
 
+    <h1>Total cases: {{ totalCases }}</h1>
+    <h1>Total new cases: + {{ totalNewCases}}</h1>
+    <h1>Total recovered: {{ totalRecoveredCases}}</h1>
+    <h1>Total active cases: {{ totalActiveCases }}</h1>
+    <h1>Total critical cases: {{  totalCriticalCases }}</h1>
 
-
-<select>
-    <option *ngFor="let country of countries">{{ country }}</option>
-</select>
+</div>
