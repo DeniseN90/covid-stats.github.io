@@ -10,6 +10,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatTableModule} from '@angular/material/table';
 import { WorldStatisticsComponent } from './world-statistics/world-statistics.component';
 import { CountriesStatisticsComponent } from './countries-statistics/countries-statistics.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSortModule } from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,8 @@ import { CountriesStatisticsComponent } from './countries-statistics/countries-s
     HomeComponent,
     HeaderComponent,
     WorldStatisticsComponent,
-    CountriesStatisticsComponent
+    CountriesStatisticsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,10 @@ import { CountriesStatisticsComponent } from './countries-statistics/countries-s
     HttpClientModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MatTableModule
+    MatTableModule,
+    MatTabsModule,
+    MatSortModule,
+    MatSelectModule
   ],
   exports: [HomeComponent, HeaderComponent],
   providers: [],
