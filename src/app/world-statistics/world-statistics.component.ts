@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { WorldStatisticsService } from './world-statistics.service';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppService } from '../app.service';
@@ -22,7 +21,7 @@ export class WorldStatisticsComponent implements OnInit {
   date: any;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor(private worldStatsService: WorldStatisticsService, private appService: AppService) {
+  constructor( private appService: AppService) {
     this.dataSource = [];
     this.getWorldStats();
     
