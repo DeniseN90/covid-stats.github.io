@@ -5,14 +5,14 @@ import { HttpClient } from '@angular/common/http';
 export class WorldStatisticsService {
   constructor(private http: HttpClient) { }
 
-  headers =  {
-    'x-rapidapi-host': 'covid-193.p.rapidapi.com',
-    'x-rapidapi-key': '41644c2f8cmsh4fcb03bb7b5648ap193587jsn102b4f01579c'
-}
+//   headers =  {
+//     'x-rapidapi-host': 'covid-193.p.rapidapi.com',
+//     'x-rapidapi-key': '41644c2f8cmsh4fcb03bb7b5648ap193587jsn102b4f01579c'
+// }
 
 
-  getWorldStats(){
-    const requestOptions = { headers: this.headers };
-      return this.http.get<any>('https://covid-193.p.rapidapi.com/statistics',  requestOptions);
-  }
+//   getWorldStats(){
+//     const requestOptions = { headers: this.headers };
+//       return this.http.get<any>('https://covid-193.p.rapidapi.com/statistics',  requestOptions);
+//   }
 }
