@@ -7,19 +7,25 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatTableModule} from '@angular/material/table';
+import { WorldStatisticsComponent } from './world-statistics/world-statistics.component';
+import { CountriesStatisticsComponent } from './countries-statistics/countries-statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    WorldStatisticsComponent,
+    CountriesStatisticsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTableModule
   ],
   exports: [HomeComponent, HeaderComponent],
   providers: [],
