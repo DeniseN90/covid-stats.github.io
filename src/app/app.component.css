@@ -1,8 +1,10 @@
-footer-component {
-
-    position: absolute;
-    bottom: 0;
-    background-color: blueviolet;
-    width: 100%;
-
+div.container-fluid {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
