@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppService } from '../app.service';
+import { CountryRow } from '../shared/model/model';
 
 @Component({
   selector: 'app-world-statistics',
@@ -13,41 +14,60 @@ export class WorldStatisticsComponent implements OnInit {
   dataSource: any;
   numberOfTabs: number;
   totalCountries: number;
-  displayedColumns: string[] = ['country', 'total-cases', 'new-cases', 'active-cases', 
-  'critical-cases', 'recovered',  'new-deaths', 'total-deaths', 
-  'total-tests'
-] ;
+  displayedColumns: string[] = [
+    'country',
+    'total-cases',
+    'new-cases',
+    'active-cases',
+    'critical-cases',
+    'recovered',
+    'new-deaths',
+    'total-deaths',
+    'total-tests',
+  ];
 
   date: any;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  constructor( private appService: AppService) {
+  mobile: boolean;
+
+  worldStats: CountryRow[];
+
+  constructor(private appService: AppService) {
     this.dataSource = [];
     this.getWorldStats();
-    
   }
 
- private getWorldStats(){
+  private getWorldStats() {
     this.appService.getWorldStats().subscribe(
       (data) => {
-        //console.log(data);
+        console.log(data);
         this.totalCountries = data.response.length;
         this.numberOfTabs = this.getTabs(this.totalCountries);
-        this.date = data.response[0].day;
-        for (let i = 0, start = 0, limit = 49; i < this.numberOfTabs; i++, start += 50, limit += 50 ) {          
-          this.dataSource[i] = new MatTableDataSource(data.response.slice(start, limit));
-         // console.log('>>>>>>>>>>>>>>>>>>>>>>>>', this.dataSource[i]);
+        this.date = data.response[0].time;
+        this.worldStats = data.response;
+        for (
+          let i = 0, start = 0, limit = 49;
+          i < this.numberOfTabs;
+          i++, start += 50, limit += 50
+        ) {
+          this.dataSource[i] = new MatTableDataSource(
+            data.response.slice(start, limit)
+          );
+          // console.log('>>>>>>>>>>>>>>>>>>>>>>>>', this.dataSource[i]);
         }
       },
       (data) => {
         this.error = data.errors;
       }
     );
-
   }
 
   ngOnInit(): void {
     this.dataSource.sort = this.sort;
+    this.mobile = window.screen.width < 560;
+    console.log(window.screen.width);
+    console.log(this.mobile);
   }
 
   private getTabs(x: number) {
@@ -77,6 +97,3 @@ export class WorldStatisticsComponent implements OnInit {
     }
   }
 }
-
-
-

@@ -1,7 +1,7 @@
 <div class="container-fluid">
-  <div class="m-3">Date: {{ date }}</div>
+  <div class="m-3 h4">Last update {{ date | date: "short" }}</div>
 
-  <mat-tab-group>
+  <mat-tab-group *ngIf="!mobile">
     <mat-tab *ngFor="let number of counter(numberOfTabs); index as i">
       <ng-template mat-tab-label>
         {{ getLabels(i) }}
@@ -18,7 +18,6 @@
             </th>
             <td mat-cell *matCellDef="let element">{{ element.country }}</td>
           </ng-container>
-
           <ng-container matColumnDef="total-cases">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               Total cases
@@ -27,7 +26,6 @@
               {{ element.cases.total }}
             </td>
           </ng-container>
-
           <ng-container matColumnDef="new-cases">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               New cases
@@ -40,7 +38,6 @@
               {{ element.cases.new }}
             </td>
           </ng-container>
-
           <ng-container matColumnDef="active-cases">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               Active cases
@@ -49,7 +46,6 @@
               {{ element.cases.active }}
             </td>
           </ng-container>
-
           <ng-container matColumnDef="critical-cases">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               Critical cases
@@ -71,7 +67,6 @@
               {{ element.cases.recovered }}
             </td>
           </ng-container>
-
           <ng-container matColumnDef="new-deaths">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               New deaths
@@ -80,7 +75,6 @@
               {{ element.deaths.new }}
             </td>
           </ng-container>
-
           <ng-container matColumnDef="total-deaths">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               Total deaths
@@ -93,7 +87,6 @@
               {{ element.deaths.total }}
             </td>
           </ng-container>
-
           <ng-container matColumnDef="total-tests">
             <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
               Total tests
@@ -102,7 +95,6 @@
               {{ element.tests.total }}
             </td>
           </ng-container>
-
           <tr
             mat-header-row
             *matHeaderRowDef="displayedColumns; sticky: true"
@@ -112,5 +104,66 @@
       </div>
     </mat-tab>
   </mat-tab-group>
-  <footer-component></footer-component>
 </div>
+
+<div class="container-fluid">
+  <mat-tab-group *ngIf="mobile">
+    <mat-tab *ngFor="let number of counter(numberOfTabs); index as i">
+      <ng-template mat-tab-label>
+        {{ getLabels(i) }}
+      </ng-template>
+
+      <div
+        *ngIf="dataSource && dataSource[0]"
+        class="container-fluid mat-elevation-z8"
+      >
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let country of worldStats">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ country.country }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <div class="container">
+              <div class="row border-bottom p-2">
+                <div class="col">Total cases</div>
+                <div class="col">{{ country.cases.total }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">New cases</div>
+                <div class="col">{{ country.cases.new }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">Active cases</div>
+                <div class="col">{{ country.cases.new }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">Critical cases</div>
+                <div class="col">{{ country.cases.critical }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">Recovered</div>
+                <div class="col">{{ country.cases.recovered }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">New deaths</div>
+                <div class="col">{{ country.deaths.new }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">Total deaths</div>
+                <div class="col">{{ country.deaths.total }}</div>
+              </div>
+              <div class="row border-bottom p-2">
+                <div class="col">Total tests</div>
+                <div class="col">{{ country.tests.total }}</div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<footer-component></footer-component>
