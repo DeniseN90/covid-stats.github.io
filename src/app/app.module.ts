@@ -15,10 +15,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from './footer/footer.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatInputModule } from '@angular/material/input';
-
-
-
 
 @NgModule({
   declarations: [
@@ -39,8 +35,7 @@ import { MatInputModule } from '@angular/material/input';
     MatTabsModule,
     MatSortModule,
     MatSelectModule,
-    MatExpansionModule,
-    MatInputModule
+    MatExpansionModule
   ],
   exports: [HomeComponent, HeaderComponent],
   providers: [],

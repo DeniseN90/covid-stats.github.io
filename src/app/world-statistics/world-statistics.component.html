@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="!mobile">
   <div class="m-3 h4">Last update {{ date | date: "short" }}</div>
 
-  <mat-tab-group *ngIf="!mobile">
+  <mat-tab-group>
     <mat-tab *ngFor="let number of counter(numberOfTabs); index as i">
       <ng-template mat-tab-label>
         {{ getLabels(i) }}
@@ -106,64 +106,50 @@
   </mat-tab-group>
 </div>
 
-<div class="container-fluid">
-  <mat-tab-group *ngIf="mobile">
-    <mat-tab *ngFor="let number of counter(numberOfTabs); index as i">
-      <ng-template mat-tab-label>
-        {{ getLabels(i) }}
-      </ng-template>
-
-      <div
-        *ngIf="dataSource && dataSource[0]"
-        class="container-fluid mat-elevation-z8"
-      >
-        <mat-accordion>
-          <mat-expansion-panel *ngFor="let country of worldStats">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                {{ country.country }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <div class="container">
-              <div class="row border-bottom p-2">
-                <div class="col">Total cases</div>
-                <div class="col">{{ country.cases.total }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">New cases</div>
-                <div class="col">{{ country.cases.new }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">Active cases</div>
-                <div class="col">{{ country.cases.new }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">Critical cases</div>
-                <div class="col">{{ country.cases.critical }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">Recovered</div>
-                <div class="col">{{ country.cases.recovered }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">New deaths</div>
-                <div class="col">{{ country.deaths.new }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">Total deaths</div>
-                <div class="col">{{ country.deaths.total }}</div>
-              </div>
-              <div class="row border-bottom p-2">
-                <div class="col">Total tests</div>
-                <div class="col">{{ country.tests.total }}</div>
-              </div>
-            </div>
-          </mat-expansion-panel>
-        </mat-accordion>
-      </div>
-    </mat-tab>
-  </mat-tab-group>
+<div class="container-fluid" *ngIf="mobile">
+  <div class="m-3 h5">Last update {{ date | date: "short" }}</div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let country of worldStats">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ country.country }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="container">
+          <div class="row border-bottom p-2">
+            <div class="col">Total cases</div>
+            <div class="col">{{ country.cases.total }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">New cases</div>
+            <div class="col">{{ country.cases.new }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">Active cases</div>
+            <div class="col">{{ country.cases.new }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">Critical cases</div>
+            <div class="col">{{ country.cases.critical }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">Recovered</div>
+            <div class="col">{{ country.cases.recovered }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">New deaths</div>
+            <div class="col">{{ country.deaths.new }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">Total deaths</div>
+            <div class="col">{{ country.deaths.total }}</div>
+          </div>
+          <div class="row border-bottom p-2">
+            <div class="col">Total tests</div>
+            <div class="col">{{ country.tests.total }}</div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
 </div>
-
 <footer-component></footer-component>
