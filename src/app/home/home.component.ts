@@ -22,8 +22,11 @@ export class HomeComponent implements OnInit {
 
   mobile: boolean;
   tablet: boolean;
+  loaded: boolean;
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService) {
+    this.loaded = false;
+  }
 
   ngOnInit() {
     this.mobile = ( window.screen.width < 360);
@@ -59,6 +62,7 @@ export class HomeComponent implements OnInit {
         this.totalDeaths = Utils.renderLongNumbers(el.deaths.total);
         this.newDeaths = Utils.renderLongNumbers(el.deaths.new.substring(1));
         // this.tests = this.renderLongNumbers(el.tests.total); comes as undefined at the moment
+        this.loaded = true;
       }
     });
   }
