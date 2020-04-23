@@ -19,17 +19,14 @@ export class HomeComponent implements OnInit {
 
   error: any;
 
+  mobile: boolean;
+  tablet: boolean;
+
   constructor(private appService: AppService) {}
 
   ngOnInit() {
-    // this.totalCases = 0;
-    // this.activeCases = 0;
-    // this.criticalCases = 0;
-    // this.recoveredCases = 0;
-    // this.newCases = 0;
-    // this.newDeaths = 0;
-    // this.totalDeaths = 0;
-    // this.tests = 0;
+    this.mobile = ( window.screen.width < 360);
+    this.tablet = ( window.screen.width < 790 && window.screen.width > 360);
     this.getWorldStats();
   }
 
@@ -47,7 +44,6 @@ export class HomeComponent implements OnInit {
   private getTotalCases(data: any[]) {
     data.forEach((el) => {
       if (el.country === 'All') {
-        // console.log('ELEMENT',el);
         this.date = el.time;
         this.totalCases = this.renderLongNumbers(el.cases.total);
         this.activeCases = this.renderLongNumbers(el.cases.active);
@@ -56,7 +52,7 @@ export class HomeComponent implements OnInit {
         this.newCases = this.renderLongNumbers(el.cases.new.substring(1));
         this.totalDeaths = this.renderLongNumbers(el.deaths.total);
         this.newDeaths = this.renderLongNumbers(el.deaths.new.substring(1));
-        // this.tests = this.renderLongNumbers(el.tests.total); comes as undefined
+        // this.tests = this.renderLongNumbers(el.tests.total); comes as undefined at the moment
       }
     });
   }

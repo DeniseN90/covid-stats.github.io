@@ -12,7 +12,7 @@ import { WorldStatisticsComponent } from './world-statistics/world-statistics.co
 import { CountriesStatisticsComponent } from './countries-statistics/countries-statistics.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSortModule } from '@angular/material/sort';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from './footer/footer.component';
 
 

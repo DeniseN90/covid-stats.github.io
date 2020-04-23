@@ -1,10 +1,10 @@
 <div class="container-fluid m-5">
-  <div class="row">
+  <div class="row m-3">
     <div class="col">
       <p class="h4">Last update: {{ date | date: "short" }}</p>
     </div>
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mt-3" *ngIf="!mobile && !tablet">
     <div class="col text-center">
       <p class="display-4">Total cases: {{ totalCases }}</p>
       <p class="display-4">New cases: + {{ newCases }}</p>
@@ -14,6 +14,32 @@
       <p class="display-4">New deaths: + {{ newDeaths }}</p>
       <p class="display-4">Total deaths: {{ totalDeaths }}</p>
       <p *ngIf="tests" class="display-4">Tests: {{ tests }}</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3" *ngIf="tablet">
+    <div class="col text-center">
+      <p class="h4">Total cases: {{ totalCases }}</p>
+      <p class="h4">New cases: + {{ newCases }}</p>
+      <p class="h4">Recovered: {{ recoveredCases }}</p>
+      <p class="h4">Active cases: {{ activeCases }}</p>
+      <p class="h4">Critical cases: {{ criticalCases }}</p>
+      <p class="h4">New deaths: + {{ newDeaths }}</p>
+      <p class="h4">Total deaths: {{ totalDeaths }}</p>
+      <p *ngIf="tests" class="h4">Tests: {{ tests }}</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-3" *ngIf="mobile">
+    <div class="col text-center">
+      <p>Total cases: {{ totalCases }}</p>
+      <p>New cases: + {{ newCases }}</p>
+      <p>Recovered: {{ recoveredCases }}</p>
+      <p>Active cases: {{ activeCases }}</p>
+      <p>Critical cases: {{ criticalCases }}</p>
+      <p>New deaths: + {{ newDeaths }}</p>
+      <p>Total deaths: {{ totalDeaths }}</p>
+      <p *ngIf="tests">Tests: {{ tests }}</p>
     </div>
   </div>
 </div>
