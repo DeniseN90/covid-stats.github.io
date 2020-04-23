@@ -1,5 +1,6 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { AppService } from '../app.service';
+import { Utils } from '../shared/utils/utils';
 
 @Component({
   selector: 'home-component',
@@ -50,33 +51,17 @@ export class HomeComponent implements OnInit {
     data.forEach((el) => {
       if (el.country === 'All') {
         this.date = el.time;
-        this.totalCases = this.renderLongNumbers(el.cases.total);
-        this.activeCases = this.renderLongNumbers(el.cases.active);
-        this.criticalCases = this.renderLongNumbers(el.cases.critical);
-        this.recoveredCases = this.renderLongNumbers(el.cases.recovered);
-        this.newCases = this.renderLongNumbers(el.cases.new.substring(1));
-        this.totalDeaths = this.renderLongNumbers(el.deaths.total);
-        this.newDeaths = this.renderLongNumbers(el.deaths.new.substring(1));
+        this.totalCases = Utils.renderLongNumbers(el.cases.total);
+        this.activeCases = Utils.renderLongNumbers(el.cases.active);
+        this.criticalCases = Utils.renderLongNumbers(el.cases.critical);
+        this.recoveredCases = Utils.renderLongNumbers(el.cases.recovered);
+        this.newCases = Utils.renderLongNumbers(el.cases.new.substring(1));
+        this.totalDeaths = Utils.renderLongNumbers(el.deaths.total);
+        this.newDeaths = Utils.renderLongNumbers(el.deaths.new.substring(1));
         // this.tests = this.renderLongNumbers(el.tests.total); comes as undefined at the moment
       }
     });
   }
 
-  private renderLongNumbers(n: number) {
-    let str = n.toString(10);
-    let newStr = '';
-    let remainder = str.length % 3;
-    let i = remainder;
-    if (remainder !== 0) {
-      newStr = newStr + str.substring(0, remainder) + "'";
-    }
-    for (i; i < str.length; i += 3) {
-      newStr += str.substring(i, i + 3);
-      if ((str.length - i) <= 3 ) {
-        continue;
-      }
-      newStr += "'";
-    }
-    return newStr;
-  }
+  
 }
