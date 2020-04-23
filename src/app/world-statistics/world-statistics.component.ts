@@ -13,8 +13,8 @@ export class WorldStatisticsComponent implements OnInit {
   dataSource: any;
   numberOfTabs: number;
   totalCountries: number;
-  displayedColumns: string[] = ['country', 'new-cases', 'active-cases', 
-  'critical-cases', 'recovered', 'total-cases', 'new-deaths', 'total-deaths', 
+  displayedColumns: string[] = ['country', 'total-cases', 'new-cases', 'active-cases', 
+  'critical-cases', 'recovered',  'new-deaths', 'total-deaths', 
   'total-tests'
 ] ;
 
