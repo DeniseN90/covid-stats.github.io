@@ -10,10 +10,13 @@ export class HomeComponent implements OnInit {
   
 
   totalCases: number;
-  totalNewCases: number;
-  totalActiveCases: number;
-  totalCriticalCases: number;
-  totalRecoveredCases: number;
+  newCases: number;
+  activeCases: number;
+  criticalCases: number;
+  recoveredCases: number;
+  newDeaths: number;
+  totalDeaths: number
+  tests: number;
   date: Date;
 
   error: any;
@@ -22,17 +25,19 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.totalCases = 0;
-    this.totalActiveCases = 0;
-    this.totalCriticalCases = 0;
-    this.totalRecoveredCases = 0;
-    this.totalNewCases = 0;
+    this.activeCases = 0;
+    this.criticalCases = 0;
+    this.recoveredCases = 0;
+    this.newCases = 0;
+    this.newDeaths = 0;
+    this.totalDeaths = 0;
+    this.tests = 0;
     this.getWorldStats();
   }
 
   private getWorldStats() {
     this.appService.getWorldStats().subscribe(
       (data) => {
-        this.date = data.response[0].day;
         this.getTotalCases(data.response);
       },
       (data) => {
@@ -44,12 +49,16 @@ export class HomeComponent implements OnInit {
   private getTotalCases(data: any[]) {
     data.forEach((el) => {
       if (el.country === 'All') {
+        console.log('ELEMENT',el);
+        this.date = el.time;
         this.totalCases += el.cases.total;
-        this.totalActiveCases += el.cases.active;
-        this.totalCriticalCases += el.cases.critical;
-        this.totalRecoveredCases += el.cases.recovered;
-        let s: string = el.cases.new.substring(1);
-        this.totalNewCases += Number(s);
+        this.activeCases += el.cases.active;
+        this.criticalCases += el.cases.critical;
+        this.recoveredCases += el.cases.recovered;
+        this.newCases = el.cases.new;
+        this.totalDeaths = el.deaths.total;
+        this.newDeaths = el.deaths.new;
+        this.tests = el.tests.total;
       }
     });
   }

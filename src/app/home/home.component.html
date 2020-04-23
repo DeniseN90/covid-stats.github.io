@@ -1,9 +1,19 @@
-<div class="container-fluid">
-
-    <h1>Total cases: {{ totalCases }}</h1>
-    <h1>Total new cases: + {{ totalNewCases}}</h1>
-    <h1>Total recovered: {{ totalRecoveredCases}}</h1>
-    <h1>Total active cases: {{ totalActiveCases }}</h1>
-    <h1>Total critical cases: {{  totalCriticalCases }}</h1>
-
+<div class="container-fluid m-5">
+  <div class="row">
+    <div class="col">
+      <p class="h4">Last update: {{ date | date: "short" }}</p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col text-center">
+      <p class="display-4">Total cases: {{ totalCases }}</p>
+      <p class="display-4">New cases: {{ newCases }}</p>
+      <p class="display-4">Recovered: {{ recoveredCases }}</p>
+      <p class="display-4">Active cases: {{ activeCases }}</p>
+      <p class="display-4">Critical cases: {{ criticalCases }}</p>
+      <p class="display-4">New deaths : {{ newDeaths }}</p>
+      <p class="display-4">Total deaths: {{ totalDeaths }}</p>
+      <p *ngIf="tests" class="display-4">Tests: {{ tests }}</p>
+    </div>
+  </div>
 </div>
