@@ -3,6 +3,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppService } from '../app.service';
 import { CountryRow } from '../shared/model/model';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-world-statistics',
@@ -32,10 +33,12 @@ export class WorldStatisticsComponent implements OnInit {
   mobile: boolean;
 
   worldStats: CountryRow[];
+  loaded: boolean;
 
   constructor(private appService: AppService) {
     this.dataSource = [];
     this.getWorldStats();
+    this.loaded = false;
   }
 
   private getWorldStats() {
@@ -54,6 +57,7 @@ export class WorldStatisticsComponent implements OnInit {
           this.dataSource[i] = new MatTableDataSource(
             data.response.slice(start, limit)
           );
+          this.loaded = true;
           // console.log('>>>>>>>>>>>>>>>>>>>>>>>>', this.dataSource[i]);
         }
       },

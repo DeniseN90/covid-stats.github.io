@@ -1,5 +1,8 @@
 <div class="container-fluid" *ngIf="!mobile">
   <div class="m-3 h4">Last update {{ date | date: "short" }}</div>
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
+  </div>
 
   <mat-tab-group>
     <mat-tab *ngFor="let number of counter(numberOfTabs); index as i">
@@ -108,6 +111,9 @@
 
 <div class="container-fluid" *ngIf="mobile">
   <div class="m-3 h5">Last update {{ date | date: "short" }}</div>
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
+  </div>
     <mat-accordion>
       <mat-expansion-panel *ngFor="let country of worldStats">
         <mat-expansion-panel-header>
