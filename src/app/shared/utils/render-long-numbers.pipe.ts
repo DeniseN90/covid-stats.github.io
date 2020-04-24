@@ -11,12 +11,15 @@ export class RenderLongNumbersPipe implements PipeTransform {
       isSigned = true;
       value = value.substring(1);
     }
-    let str = value.toString(10);
+    let str = value.toString();
     let newStr = '';
     let remainder = str.length % 3;
     let i = remainder;
     if (remainder !== 0) {
-      newStr = newStr + str.substring(0, remainder) + "'";
+      newStr = newStr + str.substring(0, remainder);
+      if (str.substring(remainder).length >= 3) {
+        newStr += "'";
+      }
     }
     for (i; i < str.length; i += 3) {
       newStr += str.substring(i, i + 3);
@@ -25,9 +28,9 @@ export class RenderLongNumbersPipe implements PipeTransform {
       }
       newStr += "'";
     }
-    if(isSigned){
+    if (isSigned) {
       newStr = '+ '.concat(newStr);
-      return newStr; 
+      return newStr;
     }
     return newStr;
   }
