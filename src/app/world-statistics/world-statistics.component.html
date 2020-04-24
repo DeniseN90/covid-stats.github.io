@@ -26,7 +26,7 @@
               Total cases
             </th>
             <td class="text-center" mat-cell *matCellDef="let element">
-              {{ element.cases.total }}
+              {{ element.cases.total | renderLongNumbers }}
             </td>
           </ng-container>
           <ng-container matColumnDef="new-cases">
@@ -38,7 +38,7 @@
               mat-cell
               *matCellDef="let element"
             >
-              {{ element.cases.new }}
+              {{ element.cases.new | renderLongNumbers }}
             </td>
           </ng-container>
           <ng-container matColumnDef="active-cases">
@@ -46,7 +46,7 @@
               Active cases
             </th>
             <td class="text-center" mat-cell *matCellDef="let element">
-              {{ element.cases.active }}
+              {{ element.cases.active | renderLongNumbers }}
             </td>
           </ng-container>
           <ng-container matColumnDef="critical-cases">
@@ -54,7 +54,7 @@
               Critical cases
             </th>
             <td class="text-center" mat-cell *matCellDef="let element">
-              {{ element.cases.critical }}
+              {{ element.cases.critical | renderLongNumbers }}
             </td>
           </ng-container>
 
@@ -67,7 +67,7 @@
               mat-cell
               *matCellDef="let element"
             >
-              {{ element.cases.recovered }}
+              {{ element.cases.recovered | renderLongNumbers }}
             </td>
           </ng-container>
           <ng-container matColumnDef="new-deaths">
@@ -75,7 +75,7 @@
               New deaths
             </th>
             <td class="text-center" mat-cell *matCellDef="let element">
-              {{ element.deaths.new }}
+              {{ element.deaths.new | renderLongNumbers }}
             </td>
           </ng-container>
           <ng-container matColumnDef="total-deaths">
@@ -87,7 +87,7 @@
               mat-cell
               *matCellDef="let element"
             >
-              {{ element.deaths.total }}
+              {{ element.deaths.total | renderLongNumbers }}
             </td>
           </ng-container>
           <ng-container matColumnDef="total-tests">
@@ -95,7 +95,7 @@
               Total tests
             </th>
             <td class="text-center" mat-cell *matCellDef="let element">
-              {{ element.tests.total }}
+              {{ element.tests.total | renderLongNumbers }}
             </td>
           </ng-container>
           <tr

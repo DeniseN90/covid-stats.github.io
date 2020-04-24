@@ -3,10 +3,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name: 'renderLongNumbers', pure: false })
 export class RenderLongNumbersPipe implements PipeTransform {
   transform(value: any): string {
+    let isSigned = false;
     if (value === null) {
       return '';
     }
     if (value[0] === '+') {
+      isSigned = true;
       value = value.substring(1);
     }
     let str = value.toString(10);
@@ -22,6 +24,10 @@ export class RenderLongNumbersPipe implements PipeTransform {
         continue;
       }
       newStr += "'";
+    }
+    if(isSigned){
+      newStr = '+ '.concat(newStr);
+      return newStr; 
     }
     return newStr;
   }
