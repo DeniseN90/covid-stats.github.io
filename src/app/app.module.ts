@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from './footer/footer.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RenderLongNumbersPipe } from './shared/utils/render-long-numbers.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HeaderComponent,
     WorldStatisticsComponent,
     CountriesStatisticsComponent,
-    FooterComponent
+    FooterComponent,
+    RenderLongNumbersPipe
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatProgressSpinnerModule
   ],
   exports: [HomeComponent, HeaderComponent],
-  providers: [],
+  providers: [ RenderLongNumbersPipe ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

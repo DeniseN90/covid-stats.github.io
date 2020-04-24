@@ -124,38 +124,39 @@
         <div class="container">
           <div class="row border-bottom p-2">
             <div class="col">Total cases</div>
-            <div class="col">{{ country.cases.total }}</div>
+            <div class="col">{{ country.cases.total | renderLongNumbers}}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">New cases</div>
-            <div class="col">{{ country.cases.new }}</div>
+            <div class="col">{{ country.cases.new | renderLongNumbers }}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">Active cases</div>
-            <div class="col">{{ country.cases.new }}</div>
+            <div class="col">{{ country.cases.new | renderLongNumbers }}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">Critical cases</div>
-            <div class="col">{{ country.cases.critical }}</div>
+            <div class="col">{{ country.cases.critical | renderLongNumbers }}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">Recovered</div>
-            <div class="col">{{ country.cases.recovered }}</div>
+            <div class="col">{{ country.cases.recovered | renderLongNumbers }}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">New deaths</div>
-            <div class="col">{{ country.deaths.new }}</div>
+            <div class="col">{{ country.deaths.new | renderLongNumbers }}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">Total deaths</div>
-            <div class="col">{{ country.deaths.total }}</div>
+            <div class="col">{{ country.deaths.total | renderLongNumbers }}</div>
           </div>
           <div class="row border-bottom p-2">
             <div class="col">Total tests</div>
-            <div class="col">{{ country.tests.total }}</div>
+            <div class="col">{{ country.tests.total | renderLongNumbers }}</div>
           </div>
         </div>
       </mat-expansion-panel>
     </mat-accordion>
 </div>
+
 <footer-component></footer-component>

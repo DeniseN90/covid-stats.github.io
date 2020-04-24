@@ -3,7 +3,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppService } from '../app.service';
 import { CountryRow } from '../shared/model/model';
-import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-world-statistics',
