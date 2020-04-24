@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class RenderLongNumbersPipe implements PipeTransform {
   transform(value: any): string {
     if (value === null) {
-      return;
+      return '';
     }
     if (value[0] === '+') {
       value = value.substring(1);
