@@ -57,7 +57,7 @@ export class WorldStatisticsComponent implements OnInit {
             data.response.slice(start, limit)
           );
           this.loaded = true;
-          // console.log('>>>>>>>>>>>>>>>>>>>>>>>>', this.dataSource[i]);
+          //console.log('>>>>>>>>>>>>>>>>>>>>>>>>', this.dataSource[i]);
         }
       },
       (data) => {
