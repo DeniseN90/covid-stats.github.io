@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 
 import { ChartDataSets } from 'chart.js';
-import { Color, Label, BaseChartDirective  } from 'ng2-charts';
+import { Color, Label, BaseChartDirective } from 'ng2-charts';
 import { AppService } from 'src/app/app.service';
 import { Utils } from 'src/app/shared/utils/utils';
 
@@ -62,7 +62,10 @@ export class LineChartComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     console.log(this.inputData);
     if (this.inputData !== undefined) {
-        this.createLineChart(this.inputData.reverse());
+      this.lineChartData = [];
+      this.lineChartColors = [];
+      this.lineChartLabels = [];
+      this.createLineChart(this.inputData.reverse());
     }
   }
 
@@ -112,8 +115,6 @@ export class LineChartComponent implements OnInit, OnChanges {
     //     limit = element;
     //   }
     // });
-
-
 
     // console.log('before rounding', limit);
     let stepLimitArray = Utils.round(limit);
@@ -184,7 +185,6 @@ export class LineChartComponent implements OnInit, OnChanges {
     // console.log('AND NOW???', this.lineChart);
   }
 
-
   private getCases(outputData: ChartDataSets, inputData: any[], type: string) {
     outputData.data = [];
     let date;
@@ -218,7 +218,10 @@ export class LineChartComponent implements OnInit, OnChanges {
     inputData.forEach((element) => {
       if (element.cases[type]) {
         if (type === 'new') {
-          outputData.data.push(element.deaths[type]);
+          let value = Number(element.cases[type].substring(1));
+          outputData.data.push(value);
+        } else {
+          outputData.data.push(element.cases[type]);
         }
       } else {
         outputData.data.push(0);
@@ -227,28 +230,24 @@ export class LineChartComponent implements OnInit, OnChanges {
     return outputData;
   }
 
-
-//   private getTests(outputData: ChartDataSets, inputData: any[]) {
-//     outputData.data = [];
-//     inputData.forEach((element) => {
-//       if (element.tests.total) {
-//         outputData.data.push(element.tests.total);
-//       } else {
-//         outputData.data.push(0);
-//       }
-//     });
-//     return outputData;
-//   }
-
+  //   private getTests(outputData: ChartDataSets, inputData: any[]) {
+  //     outputData.data = [];
+  //     inputData.forEach((element) => {
+  //       if (element.tests.total) {
+  //         outputData.data.push(element.tests.total);
+  //       } else {
+  //         outputData.data.push(0);
+  //       }
+  //     });
+  //     return outputData;
+  //   }
 
   updateConfigAsNewObject(lineChartOptions) {
     // console.log('IN UPDATE ', this.lineChart);
     //  console.log('BEFORE UPDATE', this.lineChart.options);
     this.lineChart.chart.config.options = lineChartOptions;
-   // console.log('AFTER UPDATE', this.lineChart.options);
-   // update chart options on DOM
+    // console.log('AFTER UPDATE', this.lineChart.options);
+    // update chart options on DOM
     this.lineChart.ngOnChanges({} as SimpleChanges);
   }
-
-
 }
