@@ -1,4 +1,7 @@
-<div class="container-fluid justify-content-center">
+<div class="container-fluid justify-content-center" *ngIf="!mobile">
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
+  </div>
   <div class="row mt-5">
     <div class="col m-3">
       <mat-form-field>
@@ -17,4 +20,22 @@
   <linechart-component [inputData]="inputData"></linechart-component>
 
   <doughnut-component [inputData]="inputData"> </doughnut-component>
+</div>
+
+<div class="container-fluid" *ngIf="mobile">
+  <div *ngIf="!loaded">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div class="row mt-5">
+    <div class="col text-center">
+      <mat-form-field>
+        <mat-label>Select the country</mat-label>
+        <mat-select (selectionChange)="selectCountry($event)">
+          <mat-option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
 </div>
