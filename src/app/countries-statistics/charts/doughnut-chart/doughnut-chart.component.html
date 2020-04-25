@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row mt-5">
+    <canvas
+      #doughnutChart
+      *ngIf="loaded"
+      baseChart
+      [data]="doughnutChartData"
+      [labels]="doughnutChartLabels"
+      [chartType]="doughnutChartType"
+      [colors]="doughnutChartColors"
+    >
+    </canvas>
+  </div>
+</div>

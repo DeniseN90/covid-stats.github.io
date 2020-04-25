@@ -1,16 +1,20 @@
 <div class="container-fluid justify-content-center">
   <div class="row mt-5">
-    <div class="col"></div>
-    <div class="col">
+    <div class="col m-3">
       <mat-form-field>
         <mat-label>Select the country</mat-label>
-        <mat-select  (selectionChange)="selectCountry($event)">
-          <mat-option *ngFor="let country of countries"[value]="country">
+        <mat-select (selectionChange)="selectCountry($event)">
+          <mat-option *ngFor="let country of countries" [value]="country">
             {{ country }}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
+    <div class="col h3 text-center">{{ selectedCountry }}</div>
     <div class="col"></div>
   </div>
+
+  <linechart-component [inputData]="inputData"></linechart-component>
+
+  <doughnut-component [inputData]="inputData"> </doughnut-component>
 </div>

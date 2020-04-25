@@ -10,23 +10,18 @@ export class CountriesStatisticsComponent implements OnInit {
   error: string;
 
   countries: string[];
+  selectedCountry: string;
+  inputData: any[];
+  constructor(private appService: AppService) {}
 
-  constructor(private appService: AppService) {
-    this.appService.getAllCountries().subscribe(
-      (data) => {
-       // console.log(data);
-        this.countries = data.response;
-      },
-      (data) => {this.error = data.errors;}
-    );
+  ngOnInit(): void {
+    this.getAllCountries();
   }
 
-  ngOnInit(): void {}
-
- private getCountryHistory(country: string) {
-    this.appService.getHistory(country).subscribe(
+  private getAllCountries() {
+    this.appService.getAllCountries().subscribe(
       (data) => {
-        console.log(data);
+        this.countries = data.response;
       },
       (data) => {
         this.error = data.errors;
@@ -34,9 +29,20 @@ export class CountriesStatisticsComponent implements OnInit {
     );
   }
 
-  selectCountry(event){
-    // console.log(event.value);
-    this.getCountryHistory(event.value);
+  private getCountryHistory(country: string) {
+    this.appService.getHistory(country).subscribe(
+      (data) => {
+        console.log(data);
+        this.inputData = data.response;
+      },
+      (data) => {
+        this.error = data.errors;
+      }
+    );
+  }
 
+  selectCountry(event) {
+    this.selectedCountry = event.value;
+    this.getCountryHistory(event.value);
   }
 }
