@@ -47,7 +47,6 @@ export class LineChartComponent implements OnInit, OnChanges {
   lineChartPlugins = [];
 
   constructor(
-    private appService: AppService,
     private changeDetectorRef: ChangeDetectorRef
   ) {
     this.loaded = false;
