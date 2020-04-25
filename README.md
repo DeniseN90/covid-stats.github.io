@@ -1,3 +1,9 @@
+# Description
+
+The project is built using Angular 9
+Display of world numbers about Covid19
+
+
 # CovidApi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
