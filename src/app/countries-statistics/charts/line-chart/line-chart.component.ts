@@ -59,7 +59,6 @@ export class LineChartComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(this.inputData);
     if (this.inputData !== undefined) {
       this.lineChartData = [];
       this.lineChartColors = [];
@@ -75,8 +74,7 @@ export class LineChartComponent implements OnInit, OnChanges {
         this.lineChartLabels.push(day);
       }
     });
-    // length x
-    console.log('Xa', this.lineChartLabels.length);
+    // console.log('Xa', this.lineChartLabels.length);
     // total cases
     let totalCasesDataSet: ChartDataSets = {};
     totalCasesDataSet.label = 'Total cases';
@@ -87,7 +85,7 @@ export class LineChartComponent implements OnInit, OnChanges {
     this.lineChartData.push(this.getCases(totalCasesDataSet, data, 'total'));
     let limit = 0;
     let step = 0;
-    console.log('LINE CHART DATA', this.lineChartData);
+    // console.log('LINE CHART DATA', this.lineChartData);
     // get the upper linit for this chart based on total case max value
     this.lineChartData[0].data.forEach((element) => {
       if (element > limit) {
@@ -103,8 +101,6 @@ export class LineChartComponent implements OnInit, OnChanges {
     //   backgroundColor: 'rgba(203, 219, 96, 1)',
     // });
     // this.lineChartData.push(this.getTests(testsDataSet, data));
-
-    console.log('LINE CHART DATA', this.lineChartData);
 
     // check if max value in tests
     // console.log('TEST ARRAY',this.lineChartData[1].data);
@@ -208,7 +204,7 @@ export class LineChartComponent implements OnInit, OnChanges {
         outputData.data.push(0);
       }
     });
-    console.log('must be equal to Xa', outputData.data.length);
+   // console.log('must be equal to Xa', outputData.data.length);
     return outputData;
   }
 

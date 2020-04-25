@@ -30,11 +30,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.mobile = ( window.screen.width < 360);
     this.tablet = ( window.screen.width < 790 && window.screen.width >= 360);
-    console.log(window.screen.width < 790);
-    console.log(window.screen.width > 360);
-    console.log(window.screen.width);
-    console.log(this.mobile);
-    console.log(this.tablet);
+    // console.log(window.screen.width < 790);
+    // console.log(window.screen.width > 360);
+    // console.log(window.screen.width);
+    // console.log(this.mobile);
+    // console.log(this.tablet);
     this.getWorldStats();
   }
 

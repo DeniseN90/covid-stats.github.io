@@ -37,7 +37,6 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(this.inputData);
     if (this.inputData !== undefined) {
       this.createDoughnutChart(this.inputData);
     }

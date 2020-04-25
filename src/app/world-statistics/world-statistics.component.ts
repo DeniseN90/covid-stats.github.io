@@ -43,7 +43,7 @@ export class WorldStatisticsComponent implements OnInit {
   private getWorldStats() {
     this.appService.getWorldStats().subscribe(
       (data) => {
-        console.log(data);
+        // console.log(data);
         this.totalCountries = data.response.length;
         this.numberOfTabs = this.getTabs(this.totalCountries);
         this.date = data.response[0].time;
@@ -69,8 +69,8 @@ export class WorldStatisticsComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.sort = this.sort;
     this.mobile = window.screen.width < 560;
-    console.log(window.screen.width);
-    console.log(this.mobile);
+   //  console.log(window.screen.width);
+  //  console.log(this.mobile);
   }
 
   private getTabs(x: number) {
