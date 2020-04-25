@@ -18,6 +18,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { RenderLongNumbersPipe } from './shared/utils/render-long-numbers.pipe';
 import { ChartsModule } from 'ng2-charts';
+import { DoughnutChartComponent } from './countries-statistics/charts/doughnut-chart/doughnut-chart.component';
+import { LineChartComponent } from './countries-statistics/charts/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ChartsModule } from 'ng2-charts';
     WorldStatisticsComponent,
     CountriesStatisticsComponent,
     FooterComponent,
-    RenderLongNumbersPipe
+    RenderLongNumbersPipe,
+    DoughnutChartComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,7 @@ import { ChartsModule } from 'ng2-charts';
     MatProgressSpinnerModule,
     ChartsModule
   ],
-  exports: [HomeComponent, HeaderComponent],
+  exports: [HomeComponent, DoughnutChartComponent, LineChartComponent],
   providers: [ RenderLongNumbersPipe ],
   bootstrap: [AppComponent]
 })
