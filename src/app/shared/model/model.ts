@@ -1,30 +1,30 @@
 import { Label } from 'ng2-charts';
 import { ChartDataSets } from 'chart.js';
 
-export interface CountryRow {
-  cases: Cases;
-  country: string;
-  day: Date;
-  deaths: Deaths;
-  test: Tests;
-  time: Date;
-}
+export class CountryRow {
+  country?: string;
+  day?: Date;
+  casesNew?: number;
+  casesActive?: number;
+  casesCritical?: number;
+  casesRecovered?: number;
+  casesTotal?: number;
+  deathsNew?: number;
+  deathsTotal?: number;
+  testsTotal?: number;
 
-export interface Cases {
-  new: string;
-  active: number;
-  critical: number;
-  recovered: number;
-  total: number;
-}
-
-export interface Deaths {
-  new: number;
-  total: number;
-}
-
-export interface Tests {
-  total: number;
+  constructor (data: any){
+    this.country = data.country;
+    this.day = data.day;
+    this.casesNew = data.cases.new;
+    this.casesTotal = data.cases.total;
+    this.casesActive = data.cases.active;
+    this.casesCritical = data.cases.critical;
+    this.casesRecovered = data.cases.recovered;
+    this.deathsNew = data.deaths.new;
+    this.deathsTotal = data.deaths.total;
+    this.testsTotal = data.tests.total;
+  }
 }
 
 export class CountryDataSet {
