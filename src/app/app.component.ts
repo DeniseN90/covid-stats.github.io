@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AppService } from './app.service';
+import { Router, NavigationEnd } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,12 @@ import { AppService } from './app.service';
 export class AppComponent {
   title = 'covid-api';
 
+  constructor(public router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
+  }
 }
