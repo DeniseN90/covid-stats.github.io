@@ -18,7 +18,7 @@ export class RenderLongNumbersPipe implements PipeTransform {
     if (remainder !== 0) {
       newStr = newStr + str.substring(0, remainder);
       if (str.substring(remainder).length >= 3) {
-        newStr += "'";
+        newStr += ",";
       }
     }
     for (i; i < str.length; i += 3) {
@@ -26,7 +26,7 @@ export class RenderLongNumbersPipe implements PipeTransform {
       if (str.length - i <= 3) {
         continue;
       }
-      newStr += "'";
+      newStr += ",";
     }
     if (isSigned) {
       newStr = '+ '.concat(newStr);
