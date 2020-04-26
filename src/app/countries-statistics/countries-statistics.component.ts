@@ -21,9 +21,9 @@ export class CountriesStatisticsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllCountries();
-    console.log(window.screen.width < 560);
+   // console.log(window.screen.width < 560);
     this.mobile = (window.screen.width < 560);
-    console.log('mobile', this.mobile);
+  //  console.log('mobile', this.mobile);
   }
 
   private getAllCountries() {

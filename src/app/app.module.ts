@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { RenderLongNumbersPipe } from './shared/utils/render-long-numbers.pipe';
 import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './countries-statistics/charts/doughnut-chart/doughnut-chart.component';
 import { LineChartComponent } from './countries-statistics/charts/line-chart/line-chart.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,8 @@ import { LineChartComponent } from './countries-statistics/charts/line-chart/lin
     LineChartComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
@@ -45,10 +46,13 @@ import { LineChartComponent } from './countries-statistics/charts/line-chart/lin
     MatSelectModule,
     MatExpansionModule,
     MatProgressSpinnerModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule
   ],
-  exports: [HomeComponent, DoughnutChartComponent, LineChartComponent],
+  exports: [RouterModule],
   providers: [ RenderLongNumbersPipe ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, HeaderComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 export class AppModule { }
