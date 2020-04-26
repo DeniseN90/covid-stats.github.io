@@ -51,7 +51,7 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [RouterModule],
   providers: [ RenderLongNumbersPipe ],
-  bootstrap: [AppComponent, HeaderComponent],
+  bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 
 })
