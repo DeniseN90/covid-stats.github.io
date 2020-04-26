@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorldStatisticsComponent } from './world-statistics.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('WorldStatisticsComponent', () => {
   let component: WorldStatisticsComponent;
@@ -8,6 +9,7 @@ describe('WorldStatisticsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ WorldStatisticsComponent ]
     })
     .compileComponents();
