@@ -25,9 +25,7 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
   doughnutChartData: ChartDataSets[];
   doughnutChartType = 'doughnut';
 
-  constructor(
-    private changeDetectorRef: ChangeDetectorRef
-  ) {
+  constructor(private changeDetectorRef: ChangeDetectorRef) {
     this.loaded = false;
   }
 
@@ -43,22 +41,31 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
   }
 
   private createDoughnutChart(data: any[]) {
-
     this.doughnutChartLabels = [];
     this.doughnutChartData = [];
-    this.doughnutChartLabels.push('Active cases');
-    let activeCases: ChartDataSets = {};
-    activeCases = data[data.length - 1].cases.active;
-    this.doughnutChartData.push(activeCases);
+
+    let critical = data[data.length - 1].cases.critical;
+    console.log('CRITICAL', critical);
     this.doughnutChartLabels.push('Critical cases');
     let criticalCases: ChartDataSets = {};
-    criticalCases = data[data.length - 1].cases.critical;
+    criticalCases = critical;
     this.doughnutChartData.push(criticalCases);
-  //  console.log('>>>>>>>>>>>>>>>>>>>>< DOUgh DATA', this.doughnutChartData);
-  //  console.log('>>>>>>>>>>>>>>>>>>', this.doughnutChart);
+
+    // console.log('CRITICAL DATA SET',criticalCases);
+    // console.log('WHOLE DATA SET',this.doughnutChartData);
+
+    let others: any = data[data.length - 1].cases.active - critical;
+    // console.log('ACTIVE', data[data.length - 1].cases.active);
+    // console.log('active less critical', others);
+
+    this.doughnutChartLabels.push('Other active cases');
+    let activeCases: ChartDataSets = {};
+    activeCases = others;
+    this.doughnutChartData.push(activeCases);
+
+    console.log('WHOLE DATA SET', this.doughnutChartData);
     this.loaded = true;
     this.changeDetectorRef.detectChanges();
-   // console.log('>>>>>>>>>>>>>>>>>>', this.doughnutChart);
-
+    // console.log('>>>>>>>>>>>>>>>>>>', this.doughnutChart);
   }
 }
