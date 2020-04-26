@@ -45,7 +45,7 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
     this.doughnutChartData = [];
 
     let critical = data[data.length - 1].cases.critical;
-    console.log('CRITICAL', critical);
+  //  console.log('CRITICAL', critical);
     this.doughnutChartLabels.push('Critical cases');
     let criticalCases: ChartDataSets = {};
     criticalCases = critical;
@@ -63,7 +63,7 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
     activeCases = others;
     this.doughnutChartData.push(activeCases);
 
-    console.log('WHOLE DATA SET', this.doughnutChartData);
+   // console.log('WHOLE DATA SET', this.doughnutChartData);
     this.loaded = true;
     this.changeDetectorRef.detectChanges();
     // console.log('>>>>>>>>>>>>>>>>>>', this.doughnutChart);

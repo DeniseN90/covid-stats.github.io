@@ -63,6 +63,7 @@ export class LineChartComponent implements OnInit, OnChanges {
       this.lineChartData = [];
       this.lineChartColors = [];
       this.lineChartLabels = [];
+      console.log('input data', this.inputData);
       this.createLineChart(this.inputData.reverse());
     }
   }
@@ -159,8 +160,8 @@ export class LineChartComponent implements OnInit, OnChanges {
     let newDeathsDataSet: ChartDataSets = {};
     newDeathsDataSet.label = 'New deaths';
     this.lineChartColors.push({
-      borderColor: 'rgba(46, 71, 71, 1)',
-      backgroundColor: 'rgba(102, 92, 92, 1)',
+      borderColor: 'rgba(15, 15, 54, 1)',
+      backgroundColor: 'rgba(66, 66, 227, 1)',
     });
     this.lineChartData.push(this.getDeaths(newDeathsDataSet, data, 'new'));
 
@@ -211,12 +212,12 @@ export class LineChartComponent implements OnInit, OnChanges {
   private getDeaths(outputData: ChartDataSets, inputData: any[], type: string) {
     outputData.data = [];
     inputData.forEach((element) => {
-      if (element.cases[type]) {
+      if (element.deaths[type]) {
         if (type === 'new') {
-          let value = Number(element.cases[type].substring(1));
+          let value = Number(element.deaths[type].substring(1));
           outputData.data.push(value);
         } else {
-          outputData.data.push(element.cases[type]);
+          outputData.data.push(element.deaths[type]);
         }
       } else {
         outputData.data.push(0);
