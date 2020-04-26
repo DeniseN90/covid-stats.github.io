@@ -1,7 +1,7 @@
 # Description
 
-The project is built using Angular 9
-Display of world numbers about Covid19
+The project is built using Angular 9.
+Display of world numbers about Covid19. To run the project locally modify the index.html file uncommenting the indicated line 
 
 
 # CovidApi
