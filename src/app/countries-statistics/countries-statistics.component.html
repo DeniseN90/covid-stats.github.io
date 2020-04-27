@@ -29,9 +29,16 @@
   <div class="row mt-5">
     <div class="col text-center">
       <mat-form-field>
+        <!--TODO SEARCH FILTER-->
         <mat-label>Select the country</mat-label>
-        <mat-select (selectionChange)="selectCountry($event)">
-          <mat-option *ngFor="let country of countries" [value]="country">
+        <mat-select (selectionChange)="selectCountry($event)" #countriesSelect>
+          <mat-option>
+            <ngx-mat-select-search placeholderLabel="Search country by name" ngModel (ngModelChange)="getFilter($event)"></ngx-mat-select-search>
+          </mat-option>
+          <mat-option
+            *ngFor="let country of filteredCountries | async"
+            [value]="country"
+          >
             {{ country }}
           </mat-option>
         </mat-select>
