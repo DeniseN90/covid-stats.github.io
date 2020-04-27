@@ -21,6 +21,8 @@ import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './countries-statistics/charts/doughnut-chart/doughnut-chart.component';
 import { LineChartComponent } from './countries-statistics/charts/line-chart/line-chart.component';
 import { RouterModule } from '@angular/router';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { RouterModule } from '@angular/router';
     MatExpansionModule,
     MatProgressSpinnerModule,
     ChartsModule,
-    RouterModule
+    RouterModule,
+    MatInputModule
   ],
   exports: [RouterModule],
   providers: [ RenderLongNumbersPipe ],

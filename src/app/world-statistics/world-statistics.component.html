@@ -152,17 +152,24 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
         </table>
       </div>
-
-      
     </mat-tab>
   </mat-tab-group>
 </div>
 
+<!-- MOBILE VERSION-->
 <div class="container-fluid" *ngIf="mobile">
-  <div class="m-3 h5">Last update {{ date | date: "short" }}</div>
+  <div class="row m-3 h5">Last update {{ date | date: "short" }}</div>
   <div *ngIf="!loaded">
     <mat-spinner></mat-spinner>
   </div>
+
+  <div class="row text-center justify-content-center">
+    <mat-form-field>
+      <mat-label>Search by country</mat-label>
+      <input matInput (keyup)="applyFilter($event)" />
+    </mat-form-field>
+  </div>
+
   <mat-accordion>
     <mat-expansion-panel *ngFor="let country of worldStats">
       <mat-expansion-panel-header>
@@ -173,39 +180,39 @@
       <div class="container">
         <div class="row border-bottom p-2">
           <div class="col">Total cases</div>
-          <div class="col">{{ country.cases.total | renderLongNumbers }}</div>
+          <div class="col">{{ country.casesTotal | renderLongNumbers }}</div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">New cases</div>
-          <div class="col">{{ country.cases.new | renderLongNumbers }}</div>
+          <div class="col">{{ country.casesNew | renderLongNumbers }}</div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">Active cases</div>
-          <div class="col">{{ country.cases.active | renderLongNumbers }}</div>
+          <div class="col">{{ country.casesActive | renderLongNumbers }}</div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">Critical cases</div>
           <div class="col">
-            {{ country.cases.critical | renderLongNumbers }}
+            {{ country.casesCritical | renderLongNumbers }}
           </div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">Recovered</div>
           <div class="col">
-            {{ country.cases.recovered | renderLongNumbers }}
+            {{ country.casesRecovered | renderLongNumbers }}
           </div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">New deaths</div>
-          <div class="col">{{ country.deaths.new | renderLongNumbers }}</div>
+          <div class="col">{{ country.deathsNew | renderLongNumbers }}</div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">Total deaths</div>
-          <div class="col">{{ country.deaths.total | renderLongNumbers }}</div>
+          <div class="col">{{ country.deathsTotal | renderLongNumbers }}</div>
         </div>
         <div class="row border-bottom p-2">
           <div class="col">Total tests</div>
-          <div class="col">{{ country.tests.total | renderLongNumbers }}</div>
+          <div class="col">{{ country.testsTotal | renderLongNumbers }}</div>
         </div>
       </div>
     </mat-expansion-panel>

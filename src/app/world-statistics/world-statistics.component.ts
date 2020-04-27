@@ -15,6 +15,8 @@ export class WorldStatisticsComponent implements OnInit {
   sortedData: any;
   numberOfTabs: number;
   totalCountries: number;
+
+  // AGGIUNGI COLONNE PER RAPPORTI TODO
   displayedColumns: string[] = [
     'country',
     'casesTotal',
@@ -34,11 +36,10 @@ export class WorldStatisticsComponent implements OnInit {
     this.sort = ms;
   }
 
-
-
   mobile: boolean;
 
   worldStats: CountryRow[];
+  sortedWorldStats: CountryRow[];
   loaded: boolean;
 
   constructor(private appService: AppService) {
@@ -48,7 +49,6 @@ export class WorldStatisticsComponent implements OnInit {
     this.getWorldStats();
   }
 
-
   private getWorldStats() {
     this.appService.getWorldStats().subscribe(
       (data) => {
@@ -56,9 +56,10 @@ export class WorldStatisticsComponent implements OnInit {
         this.totalCountries = data.response.length;
         this.numberOfTabs = this.getTabs(this.totalCountries);
         this.date = data.response[0].time;
-        for(let i = 0; i < data.response.length; i ++){
+        for (let i = 0; i < data.response.length; i++) {
           this.worldStats.push(new CountryRow(data.response[i]));
         }
+        this.sortedWorldStats = this.worldStats;
         for (
           let i = 0, start = 0, limit = 49;
           i < this.numberOfTabs;
@@ -114,15 +115,29 @@ export class WorldStatisticsComponent implements OnInit {
     }
   }
 
-
-  sortData(sort: Sort, i: number) {  
-    console.log('SORT',sort);
-    console.log(i);
+  sortData(sort: Sort, i: number) {
     const data = this.dataSource[i];
     if (!sort.active || sort.direction === '') {
       this.sortedData[i] = data;
       return;
     }
-    this.sortedData[i] = new MatTableDataSource(data.sortData(data.filteredData, sort));
+    this.sortedData[i] = new MatTableDataSource(
+      data.sortData(data.filteredData, sort)
+    );
+  }
+
+  applyFilter(event) {
+    if (event.target.value == '') {
+      this.worldStats = this.sortedWorldStats;
+      return this.worldStats;
+    }
+    const filterValue = event.target.value;
+    this.worldStats = this.worldStats.filter((element) => {
+      return (
+        element.country
+          .toLocaleLowerCase()
+          .indexOf(filterValue.trim().toLowerCase()) != -1
+      );
+    });
   }
 }
