@@ -21,8 +21,8 @@ import { ChartsModule } from 'ng2-charts';
 import { DoughnutChartComponent } from './countries-statistics/charts/doughnut-chart/doughnut-chart.component';
 import { LineChartComponent } from './countries-statistics/charts/line-chart/line-chart.component';
 import { RouterModule } from '@angular/router';
-import {MatInputModule} from '@angular/material/input';
-
+import { MatInputModule } from '@angular/material/input';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 
 @NgModule({
   declarations: [
@@ -50,7 +50,8 @@ import {MatInputModule} from '@angular/material/input';
     MatProgressSpinnerModule,
     ChartsModule,
     RouterModule,
-    MatInputModule
+    MatInputModule,
+    NgxMatSelectSearchModule
   ],
   exports: [RouterModule],
   providers: [ RenderLongNumbersPipe ],
