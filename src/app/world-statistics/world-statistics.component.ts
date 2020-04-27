@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AppService } from '../app.service';
 import { CountryRow } from '../shared/model/model';
@@ -12,22 +12,29 @@ import { CountryRow } from '../shared/model/model';
 export class WorldStatisticsComponent implements OnInit {
   error: string;
   dataSource: any;
+  sortedData: any;
   numberOfTabs: number;
   totalCountries: number;
   displayedColumns: string[] = [
     'country',
-    'total-cases',
-    'new-cases',
-    'active-cases',
-    'critical-cases',
-    'recovered',
-    'new-deaths',
-    'total-deaths',
-    'total-tests',
+    'casesTotal',
+    'casesNew',
+    'casesActive',
+    'casesCritical',
+    'casesRecovered',
+    'deathsNew',
+    'deathsTotal',
+    'testsTotal',
   ];
 
   date: any;
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
+
+  private sort: MatSort;
+  @ViewChild(MatSort) set matSort(ms: MatSort) {
+    this.sort = ms;
+  }
+
+
 
   mobile: boolean;
 
@@ -36,9 +43,11 @@ export class WorldStatisticsComponent implements OnInit {
 
   constructor(private appService: AppService) {
     this.dataSource = [];
+    this.sortedData = [];
+    this.worldStats = [];
     this.getWorldStats();
-    this.loaded = false;
   }
+
 
   private getWorldStats() {
     this.appService.getWorldStats().subscribe(
@@ -47,17 +56,23 @@ export class WorldStatisticsComponent implements OnInit {
         this.totalCountries = data.response.length;
         this.numberOfTabs = this.getTabs(this.totalCountries);
         this.date = data.response[0].time;
-        this.worldStats = data.response;
+        for(let i = 0; i < data.response.length; i ++){
+          this.worldStats.push(new CountryRow(data.response[i]));
+        }
         for (
           let i = 0, start = 0, limit = 49;
           i < this.numberOfTabs;
           i++, start += 50, limit += 50
         ) {
           this.dataSource[i] = new MatTableDataSource(
-            data.response.slice(start, limit)
+            this.worldStats.slice(start, limit)
           );
+          this.dataSource[i].sort = this.sort;
+          this.sortedData[i] = new MatTableDataSource(
+            this.worldStats.slice(start, limit)
+          );
+          this.sortedData[i].sort = this.sort;
           this.loaded = true;
-          //console.log('>>>>>>>>>>>>>>>>>>>>>>>>', this.dataSource[i]);
         }
       },
       (data) => {
@@ -67,10 +82,9 @@ export class WorldStatisticsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataSource.sort = this.sort;
     this.mobile = window.screen.width < 560;
-   //  console.log(window.screen.width);
-  //  console.log(this.mobile);
+    //  console.log(window.screen.width);
+    //  console.log(this.mobile);
   }
 
   private getTabs(x: number) {
@@ -98,5 +112,17 @@ export class WorldStatisticsComponent implements OnInit {
       case 4:
         return '201 - ' + this.totalCountries;
     }
+  }
+
+
+  sortData(sort: Sort, i: number) {  
+    console.log('SORT',sort);
+    console.log(i);
+    const data = this.dataSource[i];
+    if (!sort.active || sort.direction === '') {
+      this.sortedData[i] = data;
+      return;
+    }
+    this.sortedData[i] = new MatTableDataSource(data.sortData(data.filteredData, sort));
   }
 }

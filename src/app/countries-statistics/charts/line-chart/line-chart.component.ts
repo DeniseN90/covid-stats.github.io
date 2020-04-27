@@ -7,10 +7,8 @@ import {
   Input,
   OnChanges,
 } from '@angular/core';
-
 import { ChartDataSets } from 'chart.js';
 import { Color, Label, BaseChartDirective } from 'ng2-charts';
-import { AppService } from 'src/app/app.service';
 import { Utils } from 'src/app/shared/utils/utils';
 
 @Component({
@@ -63,7 +61,6 @@ export class LineChartComponent implements OnInit, OnChanges {
       this.lineChartData = [];
       this.lineChartColors = [];
       this.lineChartLabels = [];
-      console.log('input data', this.inputData);
       this.createLineChart(this.inputData.reverse());
     }
   }
