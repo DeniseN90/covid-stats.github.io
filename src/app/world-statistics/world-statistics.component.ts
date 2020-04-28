@@ -30,7 +30,7 @@ export class WorldStatisticsComponent implements OnInit {
   ];
 
   date: any;
-
+  
   private sort: MatSort;
   @ViewChild(MatSort) set matSort(ms: MatSort) {
     this.sort = ms;
@@ -132,7 +132,7 @@ export class WorldStatisticsComponent implements OnInit {
       return this.worldStats;
     }
     const filterValue = event.target.value;
-    this.worldStats = this.worldStats.filter((element) => {
+    this.worldStats = this.sortedWorldStats.filter((element) => {
       return (
         element.country
           .toLocaleLowerCase()
