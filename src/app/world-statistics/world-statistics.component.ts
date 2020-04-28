@@ -78,6 +78,7 @@ export class WorldStatisticsComponent implements OnInit {
         }
         this.worldCumulativeStats = this.worldStats.filter(isCumulative);
         this.worldStats = this.worldStats.filter(isNotCumulative);
+        this.totalCountries -= this.worldCumulativeStats.length;
         this.sortedWorldStats = this.worldStats;
         this.cumulativeDataSource = new MatTableDataSource(this.worldCumulativeStats);
         for (
@@ -178,12 +179,12 @@ function isCumulative(element) {
 
 function isNotCumulative(element) {
   if (
-    element.country !== 'Asia' ||
-    element.country !== 'Europe' ||
-    element.country !== 'North-America' ||
-    element.country !== 'Oceania' ||
-    element.country !== 'Africa' ||
-    element.country !== 'South-America' ||
+    element.country !== 'Asia' &&
+    element.country !== 'Europe' &&
+    element.country !== 'North-America' &&
+    element.country !== 'Oceania' &&
+    element.country !== 'Africa' &&
+    element.country !== 'South-America' &&
     element.country !== 'All'
   ) {
     return element;
