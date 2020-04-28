@@ -3,7 +3,7 @@
 The project is built using Angular 9.
 Display of world numbers about Covid19. To run the project locally modify the index.html file uncommenting the indicated line 
 
-The project is published at the page [https://denisen90.github.io/covid-stats/world-stats](https://denisen90.github.io/covid-stats/world-stats)
+The project is published at the page [https://denisen90.github.io/covid-stats/](https://denisen90.github.io/covid-stats/)
 
 
 # CovidApi
