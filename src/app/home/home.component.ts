@@ -42,6 +42,7 @@ export class HomeComponent implements OnInit {
     this.appService.getWorldStats().subscribe(
       (data) => {
         this.getTotalCases(data.response);
+       // console.log(data);
       },
       (data) => {
         this.error = data.errors;
