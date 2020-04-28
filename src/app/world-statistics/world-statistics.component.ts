@@ -30,7 +30,7 @@ export class WorldStatisticsComponent implements OnInit {
   ];
 
   date: any;
-  
+
   private sort: MatSort;
   @ViewChild(MatSort) set matSort(ms: MatSort) {
     this.sort = ms;
@@ -42,11 +42,27 @@ export class WorldStatisticsComponent implements OnInit {
   sortedWorldStats: CountryRow[];
   loaded: boolean;
 
+  worldCumulativeStats: CountryRow[];
+
+  countriesData: boolean;
+  cumulativeData: boolean;
+
+  cumulativeDataSource: any;
+
+
   constructor(private appService: AppService) {
     this.dataSource = [];
     this.sortedData = [];
     this.worldStats = [];
     this.getWorldStats();
+    this.countriesData = true;
+    this.cumulativeData = false;
+  }
+
+  ngOnInit(): void {
+    this.mobile = window.screen.width < 560;
+    //  console.log(window.screen.width);
+    //  console.log(this.mobile);
   }
 
   private getWorldStats() {
@@ -57,9 +73,13 @@ export class WorldStatisticsComponent implements OnInit {
         this.numberOfTabs = this.getTabs(this.totalCountries);
         this.date = data.response[0].time;
         for (let i = 0; i < data.response.length; i++) {
+          //console.log(data.response);
           this.worldStats.push(new CountryRow(data.response[i]));
         }
+        this.worldCumulativeStats = this.worldStats.filter(isCumulative);
+        this.worldStats = this.worldStats.filter(isNotCumulative);
         this.sortedWorldStats = this.worldStats;
+        this.cumulativeDataSource = new MatTableDataSource(this.worldCumulativeStats);
         for (
           let i = 0, start = 0, limit = 49;
           i < this.numberOfTabs;
@@ -80,12 +100,6 @@ export class WorldStatisticsComponent implements OnInit {
         this.error = data.errors;
       }
     );
-  }
-
-  ngOnInit(): void {
-    this.mobile = window.screen.width < 560;
-    //  console.log(window.screen.width);
-    //  console.log(this.mobile);
   }
 
   private getTabs(x: number) {
@@ -139,5 +153,39 @@ export class WorldStatisticsComponent implements OnInit {
           .indexOf(filterValue.trim().toLowerCase()) != -1
       );
     });
+  }
+
+  showCountriesOrCumulative(event) {
+    this.countriesData = (event.target.value === 'countriesData');
+    this.cumulativeData = (event.target.value === 'cumulativeData');
+  }
+
+}
+
+function isCumulative(element) {
+  if (
+    element.country === 'Asia' ||
+    element.country === 'Europe' ||
+    element.country === 'North-America' ||
+    element.country === 'Oceania' ||
+    element.country === 'Africa' ||
+    element.country === 'South-America' ||
+    element.country === 'All'
+  ) {
+    return element;
+  }
+}
+
+function isNotCumulative(element) {
+  if (
+    element.country !== 'Asia' ||
+    element.country !== 'Europe' ||
+    element.country !== 'North-America' ||
+    element.country !== 'Oceania' ||
+    element.country !== 'Africa' ||
+    element.country !== 'South-America' ||
+    element.country !== 'All'
+  ) {
+    return element;
   }
 }

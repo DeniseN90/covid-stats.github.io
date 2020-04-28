@@ -23,6 +23,7 @@ import { LineChartComponent } from './countries-statistics/charts/line-chart/lin
 import { RouterModule } from '@angular/router';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -54,7 +55,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     RouterModule,
     NgxMatSelectSearchModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   exports: [RouterModule],
   providers: [RenderLongNumbersPipe],
