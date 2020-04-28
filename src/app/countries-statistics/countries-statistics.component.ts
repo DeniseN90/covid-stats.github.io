@@ -1,44 +1,57 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { AppService } from '../app.service';
 import { MatSelect } from '@angular/material/select';
 import { take, takeUntil } from 'rxjs/operators';
 import { Subject, ReplaySubject } from 'rxjs';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-countries-statistics',
   templateUrl: './countries-statistics.component.html',
   styleUrls: ['./countries-statistics.component.css'],
 })
-export class CountriesStatisticsComponent implements OnInit {
+export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
   error: string;
 
   countries: string[];
-  
+
   selectedCountry: string;
   inputData: any[];
   loaded: boolean;
   mobile: boolean;
-  filter: any = '';
 
-  @ViewChild('countriesSelect') singleSelect: MatSelect; 
-  private _onDestroy = new Subject<void>();
-  public filteredCountries: ReplaySubject<string[]> = new ReplaySubject<string[]>(1);
+  searchFilter = new FormControl('');
 
-  constructor(private appService: AppService) {
-    this.loaded = true;
-  }
+  protected _onDestroy = new Subject<void>();
+
+  filteredCountries: ReplaySubject<string[]> = new ReplaySubject<string[]>(1);
+
+  @ViewChild('select', { static: true }) select: MatSelect;
+
+  constructor(private appService: AppService) {}
 
   ngOnInit(): void {
-    this.filter = '';
     this.getAllCountries();
-   // console.log(window.screen.width < 560);
-    this.mobile = (window.screen.width < 560);
-  //  console.log('mobile', this.mobile);
-  // this.filter.valueChanges
-  //     .pipe(takeUntil(this._onDestroy))
-  //     .subscribe(() => {
-  //       this.filterCountries();
-  //     });
+    // console.log(window.screen.width < 560);
+    this.mobile = window.screen.width < 560;
+    //  console.log('mobile', this.mobile);
+    this.searchFilter.valueChanges
+      .pipe(takeUntil(this._onDestroy))
+      .subscribe(() => {
+        this.filterCountries();
+      });
+  }
+
+  ngAfterViewInit() {
+    this.setInitialValue();
+  }
+
+  protected setInitialValue() {
+    this.filteredCountries
+      .pipe(take(1), takeUntil(this._onDestroy))
+      .subscribe(() => {
+        this.select.compareWith = (a: string, b: string) => a && b && a === b;
+      });
   }
 
   private getAllCountries() {
@@ -46,6 +59,7 @@ export class CountriesStatisticsComponent implements OnInit {
       (data) => {
         this.countries = data.response;
         this.filteredCountries.next(this.countries.slice());
+        this.loaded = true;
       },
       (data) => {
         this.error = data.errors;
@@ -62,10 +76,9 @@ export class CountriesStatisticsComponent implements OnInit {
     this.loaded = false;
     this.appService.getHistory(country).subscribe(
       (data) => {
-      //  console.log(data);
+        //  console.log(data);
         this.inputData = data.response;
         this.loaded = true;
-        
       },
       (data) => {
         this.error = data.errors;
@@ -73,27 +86,26 @@ export class CountriesStatisticsComponent implements OnInit {
     );
   }
 
-  getFilter(event){
-    console.log(event);
-  }
-
-  private filterCountries() {
+  protected filterCountries() {
     if (!this.countries) {
       return;
     }
-    // get the search keyword
-    let search = this.filter;
+    let search = this.searchFilter.value;
     if (!search) {
       this.filteredCountries.next(this.countries.slice());
       return;
     } else {
       search = search.toLowerCase();
     }
-    // filter the banks
     this.filteredCountries.next(
-      this.countries.filter(country => country.toLowerCase().indexOf(search) > -1)
+      this.countries.filter(
+        (country) => country.toLowerCase().indexOf(search) > -1
+      )
     );
   }
 
-  
+  ngOnDestroy() {
+    this._onDestroy.next();
+    this._onDestroy.complete();
+  }
 }
