@@ -1,6 +1,7 @@
 /// <reference types="@types/google.analytics" />
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
