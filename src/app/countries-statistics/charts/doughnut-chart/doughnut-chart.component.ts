@@ -22,8 +22,9 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
   @ViewChild(BaseChartDirective, { static: false })
   doughnutChart: BaseChartDirective;
   doughnutChartLabels: Label[];
-  doughnutChartData: ChartDataSets[];
+  doughnutChartData: MultiDataSet[];
   doughnutChartType = 'doughnut';
+  totalActiveCases: number;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) {
     this.loaded = false;
@@ -47,24 +48,25 @@ export class DoughnutChartComponent implements OnInit, OnChanges {
     let critical = data[data.length - 1].cases.critical;
   //  console.log('CRITICAL', critical);
     this.doughnutChartLabels.push('Critical cases');
-    let criticalCases: ChartDataSets = {};
+    let criticalCases: MultiDataSet = [];
     criticalCases = critical;
     this.doughnutChartData.push(criticalCases);
 
     // console.log('CRITICAL DATA SET',criticalCases);
     // console.log('WHOLE DATA SET',this.doughnutChartData);
 
-    let others: any = data[data.length - 1].cases.active - critical;
+    this.totalActiveCases = data[data.length-1].cases.active;
+    let others: any = this.totalActiveCases - critical;
     // console.log('ACTIVE', data[data.length - 1].cases.active);
     // console.log('active less critical', others);
 
     this.doughnutChartLabels.push('Other active cases');
-    let activeCases: ChartDataSets = {};
+    let activeCases: MultiDataSet = [];
     activeCases = others;
     this.doughnutChartData.push(activeCases);
 
-   // console.log('WHOLE DATA SET', this.doughnutChartData);
     this.loaded = true;
+    // this allows the linechart update on the UI
     this.changeDetectorRef.detectChanges();
     // console.log('>>>>>>>>>>>>>>>>>>', this.doughnutChart);
   }

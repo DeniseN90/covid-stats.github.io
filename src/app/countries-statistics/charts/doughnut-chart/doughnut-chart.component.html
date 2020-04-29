@@ -1,4 +1,6 @@
-<div class="container">
+<div class="container mt-5">
+  <div *ngIf="loaded" class="row h4">Total active cases {{ totalActiveCases | renderLongNumbers}}</div>
+
   <div class="row mt-5">
     <canvas
       #doughnutChart
