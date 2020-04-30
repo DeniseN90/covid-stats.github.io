@@ -25,7 +25,7 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { BarChartMobileComponent } from './countries-statistics/charts/mobile-charts/bar-chart-mobile.component';
-
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 
 @NgModule({
@@ -58,7 +58,9 @@ import { BarChartMobileComponent } from './countries-statistics/charts/mobile-ch
     NgxMatSelectSearchModule,
     ReactiveFormsModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    NgxGoogleAnalyticsModule.forRoot('UA-90688399-7'),
+    NgxGoogleAnalyticsRouterModule
   ],
   exports: [RouterModule],
   providers: [RenderLongNumbersPipe],

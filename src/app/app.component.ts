@@ -1,22 +1,18 @@
-/// <reference types="@types/google.analytics" />
-import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-declare let ga: Function;
+import { Component, OnInit } from '@angular/core';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'covid-api';
 
-  constructor(public router: Router) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        ga('set', 'page', event.urlAfterRedirects);
-        ga('send', 'pageview');
-      }
-    });
+  constructor(protected $gaService: GoogleAnalyticsService) {
+  }
+
+  ngOnInit() {
+    this.$gaService.pageView('/', 'covid-stats');
   }
 }
