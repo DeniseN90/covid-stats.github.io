@@ -1,10 +1,23 @@
 # Description
 
-The project is built using Angular 9.
-Display of world numbers about Covid19. To run the project locally modify the index.html file uncommenting the indicated line 
+The project is a SPA built using Angular 9.
+It displays daily updated numbers about Covid-19 in the world  
+Here the used API [https://rapidapi.com/api-sports/api/covid-193](https://rapidapi.com/api-sports/api/covid-193)
 
 The project is published at the page [https://denisen90.github.io/covid-stats/](https://denisen90.github.io/covid-stats/)
 
+Still in development, contributions are welcomed.
+
+## Run the app
+
+Clone locally the repository. 
+Before running the application modify the file index.html:
+<!-- uncomment this for deploy-->
+<!-- <base href="https://denisen90.github.io/covid-stats/" /> -->
+<!-- uncomment this to run it locally -->
+<!-- <base href="/" /> -->
+ 
+Run `npm i` in the root of the project to install the needed dependency and then `npm start` or `ng serve` to run the application locally.
 
 # CovidApi
 
@@ -33,3 +46,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+
