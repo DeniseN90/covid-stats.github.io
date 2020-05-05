@@ -17,8 +17,7 @@ export class Utils {
     if (limit > n * 2) {
       limit /= 2;
     }
-    let step = limit / 10;
-    return [limit, step];
+    return limit;
   }
 
   /**
@@ -33,10 +32,12 @@ export class Utils {
       limitValue += '0';
     }
     let limit = Number(limitValue);
+    if (limit > n * 4) {
+      limit /= 4;
+    }
     if (limit > n * 2) {
       limit /= 2;
     }
-    let step = limit / 10;
-    return [limit, step];
+    return limit;
   }
 }

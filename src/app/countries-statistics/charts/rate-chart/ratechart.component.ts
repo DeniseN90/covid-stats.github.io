@@ -69,7 +69,7 @@ export class RateChartComponent implements OnInit, OnChanges {
         pointBorderColor: 'rgba(350, 450, 100, 0.7)',
         pointHoverBackgroundColor: '#000',
         pointHoverBorderColor: 'rgba(350, 450, 100, 0.8)',
-      }
+      },
     ];
   }
 
@@ -96,21 +96,18 @@ export class RateChartComponent implements OnInit, OnChanges {
   }
 
   private getLimit(dataSet: any[]) {
-    let limit = 0;
+    let limit = Math.max(...dataSet);
     let step = 0;
-    let downLimit = 0;
-    // get the upper limit for this chart based on total case max value
-    dataSet.forEach((element) => {
-      if (element > limit) {
-        limit = element;
-      }
-    });
-    let stepLimitArray = Utils.roundGrowthRate(limit);
-    limit = stepLimitArray[0];
-    step = stepLimitArray[1];
-    downLimit = -limit;
+    let downLimit = Math.min(...dataSet);
+    if (downLimit < 0) {
+      downLimit = Utils.roundGrowthRate(downLimit * -1) ;
+      this.rateChartOptions.scales.yAxes[0].ticks.min = downLimit * -1;
+    } else {
+      this.rateChartOptions.scales.yAxes[0].ticks.min = 0;
+    }
+    limit = Utils.roundGrowthRate(limit);
+    step = limit / 10;
     this.rateChartOptions.scales.yAxes[0].ticks.max = limit;
-    this.rateChartOptions.scales.yAxes[0].ticks.min = downLimit;
     this.rateChartOptions.scales.yAxes[0].ticks.stepSize = step;
   }
 

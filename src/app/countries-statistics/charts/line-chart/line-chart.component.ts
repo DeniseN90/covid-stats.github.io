@@ -137,15 +137,9 @@ export class LineChartComponent implements OnInit, OnChanges {
   private getLimit(dataSet: any[]) {
     let limit = 0;
     let step = 0;
-    // get the upper limit for this chart based on total case max value
-    dataSet.forEach((element) => {
-      if (element > limit) {
-        limit = element;
-      }
-    });
-    let stepLimitArray = Utils.round(limit);
-    limit = stepLimitArray[0];
-    step = stepLimitArray[1];
+    limit = Math.max(...dataSet);
+    limit = Utils.round(limit);
+    step = limit/10;
     this.lineChartOptions.scales.yAxes[0].ticks.max = limit;
     this.lineChartOptions.scales.yAxes[0].ticks.stepSize = step;
   }
