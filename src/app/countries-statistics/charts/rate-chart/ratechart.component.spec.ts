@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RateChartComponent } from './rate-chart.component';
+import { RateChartComponent } from './ratechart.component';
 
 
 describe('RateChartComponent', () => {

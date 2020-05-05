@@ -26,7 +26,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { BarChartMobileComponent } from './countries-statistics/charts/mobile-charts/bar-chart-mobile.component';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
-import { RateChartComponent } from './countries-statistics/charts/rate-chart/rate-chart.component';
+import { RateChartComponent } from './countries-statistics/charts/rate-chart/ratechart.component';
 
 
 @NgModule({

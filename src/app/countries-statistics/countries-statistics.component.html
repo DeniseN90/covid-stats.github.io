@@ -6,26 +6,24 @@
   </div>
   <div class="row mt-5">
     <div class="col m-3 text-center">
-      <form>
-        <mat-form-field>
-          <mat-label>Select the country</mat-label>
-          <mat-select #select (selectionChange)="selectCountry($event)">
-            <mat-option>
-              <ngx-mat-select-search
-                [formControl]="searchFilter"
-                placeholderLabel=""
-                noEntriesFoundLabel="no country found"
-              ></ngx-mat-select-search>
-            </mat-option>
-            <mat-option
-              *ngFor="let country of filteredCountries | async"
-              [value]="country"
-            >
-              {{ country }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </form>
+      <mat-form-field>
+        <mat-label>Select the country</mat-label>
+        <mat-select #select (selectionChange)="selectCountry($event)">
+          <mat-option>
+            <ngx-mat-select-search
+              [formControl]="searchFilter"
+              placeholderLabel=""
+              noEntriesFoundLabel="no country found"
+            ></ngx-mat-select-search>
+          </mat-option>
+          <mat-option
+            *ngFor="let country of filteredCountries | async"
+            [value]="country"
+          >
+            {{ country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
     <div *ngIf="!mobile" class="col h3 text-center align-self-center">
       {{ selectedCountry }}
@@ -37,13 +35,22 @@
   <!--DESKTOP CHART-->
   <linechart-component
     *ngIf="!mobile"
+    [lineChartLabels]="dataLabels"
     [inputData]="inputData"
   ></linechart-component>
   <!--MOBILE CHART-->
   <bar-chart-mobile-component
     *ngIf="mobile"
+    [barChartLabels]="dataLabels"
     [inputData]="inputData"
   ></bar-chart-mobile-component>
 
+  <!--DOUGHNUT CHART-->
   <doughnut-component [inputData]="inputData"> </doughnut-component>
+
+  <!-- RATE CHART-->
+  <ratechart-component
+    [inputData]="inputData"
+    [rateChartLabels]="dataLabels"
+  ></ratechart-component>
 </div>

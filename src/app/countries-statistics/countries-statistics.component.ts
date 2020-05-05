@@ -4,6 +4,7 @@ import { MatSelect } from '@angular/material/select';
 import { take, takeUntil } from 'rxjs/operators';
 import { Subject, ReplaySubject } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import { ChartUtils } from '../shared/utils/charts-utils';
 
 @Component({
   selector: 'app-countries-statistics',
@@ -17,6 +18,7 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
 
   selectedCountry: string;
   inputData: any[];
+  dataLabels: any[];
   loaded: boolean;
   mobile: boolean;
 
@@ -32,9 +34,8 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.getAllCountries();
-    // console.log(window.screen.width < 560);
     this.mobile = window.screen.width < 560;
-    //  console.log('mobile', this.mobile);
+    this.dataLabels = [];
     this.searchFilter.valueChanges
       .pipe(takeUntil(this._onDestroy))
       .subscribe(() => {
@@ -76,8 +77,9 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
     this.loaded = false;
     this.appService.getHistory(country).subscribe(
       (data) => {
-        //  console.log(data);
-        this.inputData = data.response;
+        let reversed = data.response.reverse();
+        this.inputData = ChartUtils.getCleanedData(reversed);
+        this.dataLabels = ChartUtils.getChartLabels(reversed);
         this.loaded = true;
       },
       (data) => {
