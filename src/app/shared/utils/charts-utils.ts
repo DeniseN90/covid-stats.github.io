@@ -4,13 +4,13 @@ import { element } from 'protractor';
 
 export class ChartUtils {
   /**
-   * The dates associated with the country data are inserted into the label array,
-   * a check is made not to insert the same date twice
+   * The country data are copied in another array,
+   * check for same days data
    * @param data the country data
-   * @param labels the empty array of label
-   * @param entries the number of entries that will be displayed
    */
-  public static getLabelsAndCleanedData(data: any[], labels: Label[], cleanData: any[]) {
+  public static getCleanedData(data: any[]) {
+    let cleanData = [];
+    let labels = [];
     data.forEach((element) => {
       const day = element.day.toString().substring(5);
       if (labels.indexOf(day) === -1) {
@@ -18,25 +18,36 @@ export class ChartUtils {
         cleanData.push(element);
       }
     });
+    return cleanData;
+  }
+
+  /**
+   * Returns an array of labels for
+   * the chart
+   * @param data
+   */
+  public static getChartLabels(data: any[]) {
+    let labels: Label[] = [];
+    data.forEach((element) => {
+      const day = element.day.toString().substring(5);
+      if (labels.indexOf(day) === -1) {
+        labels.push(day);
+      }
+    });
+    return labels;
   }
 
   /**
    * Takes an array of country data, and parses the cases,
    * according the needed type of cases.
    * Returns the ChartDataSet
-   * @param outputData array to be returned
    * @param inputData the country data
    * @param type type of cases
    */
-  public static getCases(
-    outputData: ChartDataSets,
-    inputData: any[],
-    type: string
-  ) {
-    outputData.data = [];
+  public static getCases(inputData: any[], type: string) {
+    let outputData = [];
     let date;
     inputData.forEach((element) => {
-      // control not to insert more data for the same day
       if (date === undefined) {
         date = element.day;
       } else {
@@ -49,12 +60,12 @@ export class ChartUtils {
       if (element.cases[type]) {
         if (type === 'new') {
           let value = Number(element.cases[type].substring(1));
-          outputData.data.push(value);
+          outputData.push(value);
         } else {
-          outputData.data.push(element.cases[type]);
+          outputData.push(element.cases[type]);
         }
       } else {
-        outputData.data.push(0);
+        outputData.push(0);
       }
     });
     return outputData;
@@ -64,17 +75,12 @@ export class ChartUtils {
    * Takes an array of country data, and parses the deaths,
    * according the needed type of deaths.
    * Returns the ChartDataSet
-   * @param outputData array to be returned
    * @param inputData the country data
    * @param type of deaths
    */
-  public static getDeaths(
-    outputData: ChartDataSets,
-    inputData: any[],
-    type: string
-  ) {
-    outputData.data = [];
-    let date: any;
+  public static getDeaths(inputData: any[], type: string) {
+    let outputData = [];
+    let date;
     inputData.forEach((element) => {
       // control not to insert more data for the same day
       if (date === undefined) {
@@ -89,14 +95,35 @@ export class ChartUtils {
       if (element.deaths[type]) {
         if (type === 'new') {
           let value = Number(element.deaths[type].substring(1));
-          outputData.data.push(value);
+          outputData.push(value);
         } else {
-          outputData.data.push(element.deaths[type]);
+          outputData.push(element.deaths[type]);
         }
       } else {
-        outputData.data.push(0);
+        outputData.push(0);
       }
     });
     return outputData;
+  }
+
+  /**
+   * Takes a chartdataset and returns the
+   * growth rate for that sequence
+   * @param set a chartdataset
+   */
+  public static getGrowthRate(set: any) {
+    const data: number[] = set.data as number[];
+    let rateData = [];
+    for (let i = 0; i < data.length - 1; i++) {
+      let yesterday = Number(data[i]);
+      let today = Number(data[i + 1]);
+      let r =
+        ((today ? today : 1) - (yesterday ? yesterday : today)) /
+        (yesterday ? yesterday : 1);
+      r *= 100;
+      r = Number(r.toFixed(2));
+      rateData[i] = r;
+    }
+    return rateData;
   }
 }
