@@ -61,19 +61,15 @@ export class WorldStatisticsComponent implements OnInit {
 
   ngOnInit(): void {
     this.mobile = window.screen.width < 560;
-    //  console.log(window.screen.width);
-    //  console.log(this.mobile);
   }
 
   private getWorldStats() {
     this.appService.getWorldStats().subscribe(
       (data) => {
-        // console.log(data);
         this.totalCountries = data.response.length;
         this.numberOfTabs = this.getTabs(this.totalCountries);
         this.date = data.response[0].time;
         for (let i = 0; i < data.response.length; i++) {
-          //console.log(data.response);
           this.worldStats.push(new CountryRow(data.response[i]));
         }
         this.worldCumulativeStats = this.worldStats.filter(isCumulative);

@@ -30,11 +30,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.mobile = ( window.screen.width < 360);
     this.tablet = ( window.screen.width < 790 && window.screen.width >= 360);
-    // console.log(window.screen.width < 790);
-    // console.log(window.screen.width > 360);
-    // console.log(window.screen.width);
-    // console.log(this.mobile);
-    // console.log(this.tablet);
     this.getWorldStats();
   }
 
@@ -42,7 +37,6 @@ export class HomeComponent implements OnInit {
     this.appService.getWorldStats().subscribe(
       (data) => {
         this.getTotalCases(data.response);
-       // console.log(data);
       },
       (data) => {
         this.error = data.errors;
