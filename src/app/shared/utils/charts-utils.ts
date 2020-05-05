@@ -1,6 +1,4 @@
-import { ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
-import { element } from 'protractor';
 
 export class ChartUtils {
   /**
