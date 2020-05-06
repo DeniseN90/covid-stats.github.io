@@ -67,6 +67,7 @@ export class BarChartMobileComponent implements OnInit, OnChanges {
   }
 
   private createBarChartMobile() {
+    this.barChartData = [];
     let totalCasesDataSet: ChartDataSets = {};
     totalCasesDataSet.label = 'Total cases';
     this.barChartColors.push({
