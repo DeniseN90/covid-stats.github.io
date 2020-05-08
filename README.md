@@ -37,11 +37,11 @@ This behavior can be restored modifying the file `package.json` (scripts.build: 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory. 
 Use the `--prod` flag for a production build.
-`ng build --prod --base-href --output-path docs`
+`ng build --prod --output-path docs`
 Remember to change the property scipts.build:prod in the the file `package.json` 
 
 
-## 4.Run the app
+## 4. Run the app
 
 Before running the application modify the file index.html:
 <!-- delete this line-->
@@ -50,12 +50,12 @@ Before running the application modify the file index.html:
 <!-- <base href="/" /> -->
  
 
-## 5.Development server
+## 5. Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-## 6.Running tests
+## 6. Running tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
