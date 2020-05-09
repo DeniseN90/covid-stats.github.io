@@ -27,7 +27,6 @@ export class HeaderComponent implements OnInit {
 
   changeMode() {
     this.otherMode = this.currentMode;
-
     if (this.currentMode === Modes.LightMode) {
       this.currentMode = Modes.DarkMode;
     } else {
