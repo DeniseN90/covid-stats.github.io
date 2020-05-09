@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
       this.router.navigated = false;
       }
     });
-
     console.log(this.router);
   }
 }
