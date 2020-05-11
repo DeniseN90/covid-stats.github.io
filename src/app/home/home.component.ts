@@ -27,8 +27,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private appService: AppService) {
     this.loaded = false;
-    console.log(this.imageUrl);
-
   }
 
   ngOnInit() {
