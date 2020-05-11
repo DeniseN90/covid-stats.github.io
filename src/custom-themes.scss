@@ -12,10 +12,6 @@ $primary: mat-palette($mat-blue-grey);
 $accent: mat-palette($mat-amber, A200, A100, A400);
 $dark-theme: mat-dark-theme($primary, $accent);
 
-@mixin background-image-home($imageurl) {
-  background: url(#{$imageurl});
-}
-
 .dark-theme {
   @include angular-material-theme($dark-theme);
   .dark-theme-class#text {
@@ -23,5 +19,16 @@ $dark-theme: mat-dark-theme($primary, $accent);
   }
   #button {
     background-color: #fff;
+  }
+
+  #background-image {
+    background-image: url(./app/images/world-image-negative.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
   }
 }
