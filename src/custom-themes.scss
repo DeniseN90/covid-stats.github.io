@@ -1,0 +1,25 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+
+$primary: mat-palette($mat-gray);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+$primary: mat-palette($mat-blue-grey);
+$accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-theme: mat-dark-theme($primary, $accent);
+
+@mixin background-image-home($imageurl) {
+  background: url(#{$imageurl});
+}
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+}
+
+.dark-theme-background {
+ // @include background-image-home(url(./../images/world-image.jpg));
+}
