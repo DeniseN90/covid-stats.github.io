@@ -18,8 +18,10 @@ $dark-theme: mat-dark-theme($primary, $accent);
 
 .dark-theme {
   @include angular-material-theme($dark-theme);
-  .dark-nav-item#link {
-    color: #fff;;
+  .dark-theme-class#text {
+    color: #fff;
+  }
+  #button {
+    background-color: #fff;
   }
 }
-

@@ -10,7 +10,6 @@ const routes: Routes = [
   { path: 'world-stats', component: WorldStatisticsComponent},
   { path: 'countries-stats', component: CountriesStatisticsComponent},
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
