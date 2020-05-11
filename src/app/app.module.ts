@@ -27,7 +27,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BarChartMobileComponent } from './countries-statistics/charts/mobile-charts/bar-chart-mobile.component';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { RateChartComponent } from './countries-statistics/charts/rate-chart/ratechart.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +65,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NgxGoogleAnalyticsRouterModule
   ],
   exports: [RouterModule],
-  providers: [RenderLongNumbersPipe, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [RenderLongNumbersPipe],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
