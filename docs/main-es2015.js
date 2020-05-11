@@ -340,13 +340,13 @@ const routes = [
 class AppRoutingModule {
 }
 AppRoutingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppRoutingModule });
-AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+AppRoutingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppRoutingModule_Factory(t) { return new (t || AppRoutingModule)(); }, imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { useHash: true })],
         _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppRoutingModule, { imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]], exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppRoutingModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
-                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+                imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, { useHash: true })],
                 exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
             }]
     }], null, null); })();
@@ -461,6 +461,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _countries_statistics_charts_mobile_charts_bar_chart_mobile_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./countries-statistics/charts/mobile-charts/bar-chart-mobile.component */ "./src/app/countries-statistics/charts/mobile-charts/bar-chart-mobile.component.ts");
 /* harmony import */ var ngx_google_analytics__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ngx-google-analytics */ "./node_modules/ngx-google-analytics/__ivy_ngcc__/fesm2015/ngx-google-analytics.js");
 /* harmony import */ var _countries_statistics_charts_rate_chart_ratechart_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./countries-statistics/charts/rate-chart/ratechart.component */ "./src/app/countries-statistics/charts/rate-chart/ratechart.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+
 
 
 
@@ -495,7 +497,7 @@ __webpack_require__.r(__webpack_exports__);
 class AppModule {
 }
 AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]] });
-AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"]], imports: [[
+AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"], , Location, { provide: _angular_common__WEBPACK_IMPORTED_MODULE_29__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_29__["HashLocationStrategy"] }], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"],
@@ -582,7 +584,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 ],
                 exports: [_angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"]],
-                providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"]],
+                providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"], , Location, { provide: _angular_common__WEBPACK_IMPORTED_MODULE_29__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_29__["HashLocationStrategy"] }],
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
                 schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]],
             }]
@@ -2009,13 +2011,12 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
 /*!***************************************!*\
   !*** ./src/app/shared/model/model.ts ***!
   \***************************************/
-/*! exports provided: CountryRow, CountryDataSet */
+/*! exports provided: CountryRow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryRow", function() { return CountryRow; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryDataSet", function() { return CountryDataSet; });
 class CountryRow {
     constructor(data) {
         this.country = data.country;
@@ -2029,8 +2030,6 @@ class CountryRow {
         this.deathsTotal = data.deaths.total;
         this.testsTotal = data.tests.total;
     }
-}
-class CountryDataSet {
 }
 
 
