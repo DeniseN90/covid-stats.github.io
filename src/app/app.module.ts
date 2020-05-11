@@ -66,7 +66,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     AppRoutingModule,
   ],
   exports: [RouterModule],
-  providers: [RenderLongNumbersPipe, Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [RenderLongNumbersPipe],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
