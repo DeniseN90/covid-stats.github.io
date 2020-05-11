@@ -26,8 +26,3 @@ export class CountryRow {
     this.testsTotal = data.tests.total;
   }
 }
-
-export class CountryDataSet {
-  lineCharData: ChartDataSets[];
-  lineChartLabels: Label[];
-}
