@@ -402,9 +402,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: '',
       redirectTo: '/',
       pathMatch: 'full'
-    }, {
-      path: '**',
-      component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"]
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -418,9 +415,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function AppRoutingModule_Factory(t) {
         return new (t || AppRoutingModule)();
       },
-      imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, {
-        useHash: true
-      })], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+      imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
     });
 
     (function () {
@@ -436,9 +431,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppRoutingModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
-          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes, {
-            useHash: true
-          })],
+          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
           exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
         }]
       }], null, null);
@@ -791,12 +784,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _countries_statistics_charts_rate_chart_ratechart_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
     /*! ./countries-statistics/charts/rate-chart/ratechart.component */
     "./src/app/countries-statistics/charts/rate-chart/ratechart.component.ts");
-    /* harmony import */
-
-
-    var _angular_common__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
-    /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -810,10 +797,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function AppModule_Factory(t) {
         return new (t || AppModule)();
       },
-      providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"], Location, {
-        provide: _angular_common__WEBPACK_IMPORTED_MODULE_29__["LocationStrategy"],
-        useClass: _angular_common__WEBPACK_IMPORTED_MODULE_29__["HashLocationStrategy"]
-      }],
+      providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"]],
       imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_8__["MatSlideToggleModule"], _angular_material_table__WEBPACK_IMPORTED_MODULE_9__["MatTableModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_12__["MatTabsModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_13__["MatSortModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_14__["MatSelectModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_16__["MatExpansionModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_17__["MatProgressSpinnerModule"], ng2_charts__WEBPACK_IMPORTED_MODULE_19__["ChartsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"], ngx_mat_select_search__WEBPACK_IMPORTED_MODULE_23__["NgxMatSelectSearchModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_25__["MatInputModule"], ngx_google_analytics__WEBPACK_IMPORTED_MODULE_27__["NgxGoogleAnalyticsModule"].forRoot('UA-90688399-7'), ngx_google_analytics__WEBPACK_IMPORTED_MODULE_27__["NgxGoogleAnalyticsRouterModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"]]
     });
 
@@ -834,10 +818,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_5__["HomeComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"], _world_statistics_world_statistics_component__WEBPACK_IMPORTED_MODULE_10__["WorldStatisticsComponent"], _countries_statistics_countries_statistics_component__WEBPACK_IMPORTED_MODULE_11__["CountriesStatisticsComponent"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_15__["FooterComponent"], _shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"], _countries_statistics_charts_doughnut_chart_doughnut_chart_component__WEBPACK_IMPORTED_MODULE_20__["DoughnutChartComponent"], _countries_statistics_charts_line_chart_line_chart_component__WEBPACK_IMPORTED_MODULE_21__["LineChartComponent"], _countries_statistics_charts_mobile_charts_bar_chart_mobile_component__WEBPACK_IMPORTED_MODULE_26__["BarChartMobileComponent"], _countries_statistics_charts_rate_chart_ratechart_component__WEBPACK_IMPORTED_MODULE_28__["RateChartComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_7__["BrowserAnimationsModule"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_8__["MatSlideToggleModule"], _angular_material_table__WEBPACK_IMPORTED_MODULE_9__["MatTableModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_12__["MatTabsModule"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_13__["MatSortModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_14__["MatSelectModule"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_16__["MatExpansionModule"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_17__["MatProgressSpinnerModule"], ng2_charts__WEBPACK_IMPORTED_MODULE_19__["ChartsModule"], _angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"], ngx_mat_select_search__WEBPACK_IMPORTED_MODULE_23__["NgxMatSelectSearchModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_25__["MatInputModule"], ngx_google_analytics__WEBPACK_IMPORTED_MODULE_27__["NgxGoogleAnalyticsModule"].forRoot('UA-90688399-7'), ngx_google_analytics__WEBPACK_IMPORTED_MODULE_27__["NgxGoogleAnalyticsRouterModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]],
           exports: [_angular_router__WEBPACK_IMPORTED_MODULE_22__["RouterModule"]],
-          providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"], Location, {
-            provide: _angular_common__WEBPACK_IMPORTED_MODULE_29__["LocationStrategy"],
-            useClass: _angular_common__WEBPACK_IMPORTED_MODULE_29__["HashLocationStrategy"]
-          }],
+          providers: [_shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_18__["RenderLongNumbersPipe"]],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
           schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["CUSTOM_ELEMENTS_SCHEMA"]]
         }]
@@ -2734,7 +2715,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 22,
       vars: 10,
-      consts: [[1, "container-fluid", "w-100"], [1, "navbar", "navbar-expand-lg", "navbar-light"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarToggler", "aria-controls", "navbarToggler", "aria-expanded", "false", "aria-label", "Toggle", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarToggler", 1, "collapse", "navbar-collapse"], ["data-toggle", "collapse", "data-target", ".navbar-collapse.show", "href", "#", 1, "navbar-brand"], [1, "nav", "nav-tabs", "navbar-nav", "mr-auto", "mt-2", "mt-lg-0"], [1, "nav-item", "active"], ["data-toggle", "collapse", "data-target", ".navbar-collapse.show", 1, "nav-link", 3, "routerLink"], [1, "sr-only"], [1, "nav-item"], [1, "p-3,", "m-3", 3, "color", "toggleChange"]],
+      consts: [[1, "container-fluid", "w-100"], [1, "navbar", "navbar-expand-lg", "navbar-light"], ["id", "button", "type", "button", "data-toggle", "collapse", "data-target", "#navbarToggler", "aria-controls", "navbarToggler", "aria-expanded", "false", "aria-label", "Toggle", 1, "navbar-toggler", "dark-theme-class"], [1, "navbar-toggler-icon"], ["id", "navbarToggler", 1, "collapse", "navbar-collapse"], ["id", "text", "data-toggle", "collapse", "data-target", ".navbar-collapse.show", "href", "#", 1, "navbar-brand", "dark-theme-class"], [1, "nav", "nav-tabs", "navbar-nav", "mr-auto", "mt-2", "mt-lg-0"], [1, "nav-item", "active"], ["id", "text", "data-toggle", "collapse", "data-target", ".navbar-collapse.show", 1, "nav-link", "dark-theme-class", 3, "routerLink"], [1, "sr-only"], [1, "nav-item"], [1, "p-3,", "m-3", 3, "color", "toggleChange"]],
       template: function HeaderComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -3321,9 +3302,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, HomeComponent);
 
         this.appService = appService;
-        this.imageUrl = "../images/world-image.jpg";
         this.loaded = false;
-        console.log(this.imageUrl);
       }
 
       _createClass(HomeComponent, [{
@@ -3332,13 +3311,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.mobile = window.screen.width < 360;
           this.tablet = window.screen.width < 790 && window.screen.width >= 360;
           this.getWorldStats();
-        }
-      }, {
-        key: "getBackgroundImage",
-        value: function getBackgroundImage() {
-          var background = {};
-          console.log(background);
-          return background;
         }
       }, {
         key: "getWorldStats",
@@ -3385,7 +3357,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       selectors: [["home-component"]],
       decls: 10,
       vars: 8,
-      consts: [[1, "container-fluid", "dark-theme-background"], [1, "row", "m-3"], [1, "col"], [1, "h4"], [4, "ngIf"], ["class", "row justify-content-center mt-3", 4, "ngIf"], [1, "row", "justify-content-center", "mt-3"], [1, "col", "text-center"], [1, "display-4"], ["class", "display-4", 4, "ngIf"], ["class", "h4", 4, "ngIf"]],
+      consts: [["id", "background-image", 1, "container-fluid", "dark-theme-class"], [1, "row", "m-3"], [1, "col"], [1, "h4"], [4, "ngIf"], ["class", "row justify-content-center mt-3", 4, "ngIf"], [1, "row", "justify-content-center", "mt-3"], [1, "col", "text-center"], [1, "display-4"], ["class", "display-4", 4, "ngIf"], ["class", "h4", 4, "ngIf"]],
       template: function HomeComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -4422,7 +4394,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_3_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Country ");
 
@@ -4450,7 +4422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_6_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Total cases ");
 
@@ -4480,7 +4452,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_9_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " New cases ");
 
@@ -4490,7 +4462,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_td_10_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 46);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -4510,7 +4482,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_12_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Active cases ");
 
@@ -4540,7 +4512,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_15_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Critical cases ");
 
@@ -4570,7 +4542,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_18_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Recovered ");
 
@@ -4580,7 +4552,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_td_19_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 36);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 47);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -4600,7 +4572,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_21_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " New deaths ");
 
@@ -4630,7 +4602,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_24_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Total deaths ");
 
@@ -4640,7 +4612,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_td_25_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 37);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td", 48);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -4660,7 +4632,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function WorldStatisticsComponent_div_16_th_27_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 42);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 45);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Total tests ");
 
@@ -4726,7 +4698,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, WorldStatisticsComponent_div_16_th_9_Template, 2, 0, "th", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, WorldStatisticsComponent_div_16_td_10_Template, 3, 3, "td", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, WorldStatisticsComponent_div_16_td_10_Template, 3, 3, "td", 42);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
@@ -4750,7 +4722,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, WorldStatisticsComponent_div_16_th_18_Template, 2, 0, "th", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, WorldStatisticsComponent_div_16_td_19_Template, 3, 3, "td", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, WorldStatisticsComponent_div_16_td_19_Template, 3, 3, "td", 43);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
@@ -4766,7 +4738,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, WorldStatisticsComponent_div_16_th_24_Template, 2, 0, "th", 41);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, WorldStatisticsComponent_div_16_td_25_Template, 3, 3, "td", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, WorldStatisticsComponent_div_16_td_25_Template, 3, 3, "td", 44);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
 
@@ -4818,9 +4790,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 51);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 2);
 
@@ -4838,7 +4810,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 2);
 
@@ -4856,7 +4828,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 2);
 
@@ -4874,7 +4846,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 2);
 
@@ -4892,7 +4864,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 2);
 
@@ -4910,7 +4882,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 2);
 
@@ -4928,7 +4900,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 2);
 
@@ -4946,7 +4918,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 2);
 
@@ -5016,7 +4988,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 43);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 49);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "mat-form-field");
 
@@ -5026,7 +4998,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "input", 44);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "input", 50);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function WorldStatisticsComponent_div_17_Template_input_keyup_5_listener($event) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r75);
@@ -5074,9 +5046,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 45);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 51);
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 2);
 
@@ -5094,7 +5066,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 2);
 
@@ -5112,7 +5084,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 2);
 
@@ -5130,7 +5102,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 2);
 
@@ -5148,7 +5120,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 2);
 
@@ -5166,7 +5138,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 2);
 
@@ -5184,7 +5156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "div", 2);
 
@@ -5202,7 +5174,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 46);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 52);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 2);
 
@@ -5436,7 +5408,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 20,
       vars: 9,
-      consts: [[1, "container-fluid"], [1, "row"], [1, "col"], [1, "m-3", "h4"], [1, "col", "p-3", "text-center"], ["data-toggle", "buttons", 1, "btn-group", "btn-group-toggle"], [1, "btn", "btn-secondary", "active"], ["value", "countriesData", "type", "radio", "autocomplete", "off", "checked", "", 3, "click"], [1, "btn", "btn-secondary"], ["type", "radio", "value", "cumulativeData", "autocomplete", "off", 3, "click"], [4, "ngIf"], ["class", "container-fluid", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""], ["matSort", "", "mat-table", "", 1, "w-100", "mat-elevation-z8", 3, "dataSource", "matSortChange"], ["matColumnDef", "country"], ["mat-sort-header", "", "class", "text-uppercase", "mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "casesTotal"], ["class", "text-center", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "casesNew"], ["class", "text-center table-warning", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "casesActive"], ["matColumnDef", "casesCritical"], ["matColumnDef", "casesRecovered"], ["class", "text-center table-success", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "deathsNew"], ["matColumnDef", "deathsTotal"], ["class", "table-danger text-center", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "testsTotal"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-sort-header", "", "mat-header-cell", "", 1, "text-uppercase"], ["mat-cell", ""], ["mat-cell", "", 1, "text-center"], ["mat-cell", "", 1, "text-center", "table-warning"], ["mat-cell", "", 1, "text-center", "table-success"], ["mat-cell", "", 1, "table-danger", "text-center"], ["mat-header-row", ""], ["mat-row", ""], ["mat-table", "", 1, "w-100", "mat-elevation-z8", 3, "dataSource"], ["class", "text-uppercase", "mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", "", 1, "text-uppercase"], [1, "row", "justify-content-center"], ["matInput", "", 3, "keyup"], [1, "container"], [1, "row", "border-bottom", "p-2"]],
+      consts: [[1, "container-fluid"], [1, "row"], [1, "col"], [1, "m-3", "h4"], [1, "col", "p-3", "text-center"], ["data-toggle", "buttons", 1, "btn-group", "btn-group-toggle"], [1, "btn", "btn-secondary", "active"], ["value", "countriesData", "type", "radio", "autocomplete", "off", "checked", "", 3, "click"], [1, "btn", "btn-secondary"], ["type", "radio", "value", "cumulativeData", "autocomplete", "off", 3, "click"], [4, "ngIf"], ["class", "container-fluid", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""], ["matSort", "", "mat-table", "", 1, "w-100", "mat-elevation-z8", 3, "dataSource", "matSortChange"], ["matColumnDef", "country"], ["mat-sort-header", "", "class", "text-uppercase", "mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "casesTotal"], ["class", "text-center", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "casesNew"], ["id", "background-color-warning", "class", "text-center table-warning dark-theme-class", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "casesActive"], ["matColumnDef", "casesCritical"], ["matColumnDef", "casesRecovered"], ["id", "background-color-success", "class", "text-center table-success dark-theme-class", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "deathsNew"], ["matColumnDef", "deathsTotal"], ["id", "background-color-danger", "class", "table-danger text-center dark-theme-class", "mat-cell", "", 4, "matCellDef"], ["matColumnDef", "testsTotal"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-sort-header", "", "mat-header-cell", "", 1, "text-uppercase"], ["mat-cell", ""], ["mat-cell", "", 1, "text-center"], ["id", "background-color-warning", "mat-cell", "", 1, "text-center", "table-warning", "dark-theme-class"], ["id", "background-color-success", "mat-cell", "", 1, "text-center", "table-success", "dark-theme-class"], ["id", "background-color-danger", "mat-cell", "", 1, "table-danger", "text-center", "dark-theme-class"], ["mat-header-row", ""], ["mat-row", ""], ["mat-table", "", 1, "w-100", "mat-elevation-z8", 3, "dataSource"], ["class", "text-uppercase", "mat-header-cell", "", 4, "matHeaderCellDef"], ["class", "text-center table-warning", "mat-cell", "", 4, "matCellDef"], ["class", "text-center table-success", "mat-cell", "", 4, "matCellDef"], ["class", "table-danger text-center", "mat-cell", "", 4, "matCellDef"], ["mat-header-cell", "", 1, "text-uppercase"], ["mat-cell", "", 1, "text-center", "table-warning"], ["mat-cell", "", 1, "text-center", "table-success"], ["mat-cell", "", 1, "table-danger", "text-center"], [1, "row", "justify-content-center"], ["matInput", "", 3, "keyup"], [1, "container"], [1, "row", "border-bottom", "p-2"]],
       template: function WorldStatisticsComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
