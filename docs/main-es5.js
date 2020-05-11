@@ -2216,7 +2216,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function CountriesStatisticsComponent_mat_option_12_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 15);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -2236,7 +2236,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function CountriesStatisticsComponent_div_14_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 16);
 
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -2254,7 +2254,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function CountriesStatisticsComponent_linechart_component_16_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "linechart-component", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "linechart-component", 17);
       }
 
       if (rf & 2) {
@@ -2266,7 +2266,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     function CountriesStatisticsComponent_bar_chart_mobile_component_17_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "bar-chart-mobile-component", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "bar-chart-mobile-component", 18);
       }
 
       if (rf & 2) {
@@ -2402,7 +2402,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       },
       decls: 20,
       vars: 11,
-      consts: [[1, "container-fluid"], [1, "row", "mt-3", "justify-content-center"], [4, "ngIf"], [1, "row", "mt-5"], [1, "col", "m-3", "text-center"], [3, "selectionChange"], ["select", ""], ["placeholderLabel", "", "noEntriesFoundLabel", "no country found", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["class", "col h3 text-center align-self-center", 4, "ngIf"], [3, "lineChartLabels", "inputData", 4, "ngIf"], [3, "barChartLabels", "inputData", 4, "ngIf"], [3, "inputData"], [3, "inputData", "rateChartLabels"], [3, "value"], [1, "col", "h3", "text-center", "align-self-center"], [3, "lineChartLabels", "inputData"], [3, "barChartLabels", "inputData"]],
+      consts: [[1, "container-fluid"], [1, "row", "mt-3", "justify-content-center"], [4, "ngIf"], [1, "row", "mt-5"], [1, "col", "m-3", "text-center"], [3, "selectionChange"], ["select", ""], ["id", "background-color-dark", 1, "dark-theme-class"], ["placeholderLabel", "", "noEntriesFoundLabel", "no country found", 3, "formControl"], ["class", "dark-theme-class", "id", "background-color-dark", 3, "value", 4, "ngFor", "ngForOf"], ["class", "col h3 text-center align-self-center", 4, "ngIf"], [3, "lineChartLabels", "inputData", 4, "ngIf"], [3, "barChartLabels", "inputData", 4, "ngIf"], [3, "inputData"], [3, "inputData", "rateChartLabels"], ["id", "background-color-dark", 1, "dark-theme-class", 3, "value"], [1, "col", "h3", "text-center", "align-self-center"], [3, "lineChartLabels", "inputData"], [3, "barChartLabels", "inputData"]],
       template: function CountriesStatisticsComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -2431,13 +2431,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return ctx.selectCountry($event);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-option");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-option", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "ngx-mat-select-search", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "ngx-mat-select-search", 8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, CountriesStatisticsComponent_mat_option_12_Template, 2, 2, "mat-option", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, CountriesStatisticsComponent_mat_option_12_Template, 2, 2, "mat-option", 9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](13, "async");
 
@@ -2447,7 +2447,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, CountriesStatisticsComponent_div_14_Template, 2, 1, "div", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, CountriesStatisticsComponent_div_14_Template, 2, 1, "div", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2455,13 +2455,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, CountriesStatisticsComponent_linechart_component_16_Template, 1, 2, "linechart-component", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, CountriesStatisticsComponent_linechart_component_16_Template, 1, 2, "linechart-component", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, CountriesStatisticsComponent_bar_chart_mobile_component_17_Template, 1, 2, "bar-chart-mobile-component", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, CountriesStatisticsComponent_bar_chart_mobile_component_17_Template, 1, 2, "bar-chart-mobile-component", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "doughnut-component", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "doughnut-component", 13);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "ratechart-component", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "ratechart-component", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
