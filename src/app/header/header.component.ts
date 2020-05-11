@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-
 
 @Component({
   selector: 'header-component',
@@ -15,6 +14,9 @@ export class HeaderComponent implements OnInit {
 
   otherMode: string;
   currentMode: string;
+
+  @Output()
+  themeSwitch = new EventEmitter();
 
   constructor() {
     this.currentMode = Modes.LightMode;
@@ -32,6 +34,12 @@ export class HeaderComponent implements OnInit {
     } else {
       this.currentMode = Modes.LightMode;
     }
+
+    this.emitThemeEvent();
+  }
+
+  private emitThemeEvent() {
+    this.themeSwitch.emit(this.currentMode);
   }
 }
 enum Modes {

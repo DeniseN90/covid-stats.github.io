@@ -1,4 +1,8 @@
-<div class="cotainer-fluid">
-  <header-component></header-component>
-  <router-outlet class="mx-0"></router-outlet>
+<div [class.dark-theme]="otherTheme" class="mat-app-background">
+  <div class="container-fluid">
+    <header-component [class.dark-theme]="otherTheme" (themeSwitch)="getEvent($event)"></header-component>
+    <div class="container-fluid">
+      <router-outlet class="mx-0"></router-outlet>
+    </div>
+  </div>
 </div>

@@ -23,14 +23,26 @@ export class HomeComponent implements OnInit {
   tablet: boolean;
   loaded: boolean;
 
+  imageUrl = "../images/world-image.jpg";
+
   constructor(private appService: AppService) {
     this.loaded = false;
+    console.log(this.imageUrl);
+
   }
 
   ngOnInit() {
     this.mobile = ( window.screen.width < 360);
     this.tablet = ( window.screen.width < 790 && window.screen.width >= 360);
     this.getWorldStats();
+  }
+
+  getBackgroundImage(){
+    let background =  {
+
+    };
+    console.log(background);
+    return background;
   }
 
   private getWorldStats() {
@@ -60,6 +72,7 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
 
   
 }

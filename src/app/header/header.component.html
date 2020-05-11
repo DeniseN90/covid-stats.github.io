@@ -1,28 +1,61 @@
 <div class="container-fluid w-100">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarToggler">
-          <a class="navbar-brand" data-toggle="collapse" data-target=".navbar-collapse.show" href="#">Corona stats</a>
-          <ul class="nav nav-tabs navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/']" >Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['world-stats']" >{{ worldStatsLabel }}</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['countries-stats']">{{ statsByCountryLabel}}</a>
-            </li>
-          </ul>
-        </div>
-        <!-- <div>
-          <mat-slide-toggle class="p-3, m-3" [color]="color" (toggleChange)="changeMode()"
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarToggler"
+      aria-controls="navbarToggler"
+      aria-expanded="false"
+      aria-label="Toggle"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <a
+        class="navbar-brand"
+        data-toggle="collapse"
+        data-target=".navbar-collapse.show"
+        href="#"
+        >Corona stats</a
+      >
+      <ul class="nav nav-tabs navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a
+            class="nav-link"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+            [routerLink]="['/']"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+            [routerLink]="['world-stats']"
+            >{{ worldStatsLabel }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-toggle="collapse"
+            data-target=".navbar-collapse.show"
+            [routerLink]="['countries-stats']"
+            >{{ statsByCountryLabel }}</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div>
+      <mat-slide-toggle
+        class="p-3, m-3"
+        [color]="color"
+        (toggleChange)="changeMode()"
         >Switch to {{ otherMode }}</mat-slide-toggle
       >
-        </div> -->
-      </nav>
-
+    </div>
+  </nav>
 </div>

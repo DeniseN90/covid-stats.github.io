@@ -1,4 +1,6 @@
-<div class="container-fluid">
+<div
+  class="container-fluid dark-theme-background"
+>
   <div class="row m-3">
     <div class="col">
       <p class="h4">Last update: {{ date | date: "short" }}</p>
@@ -9,16 +11,29 @@
     <mat-spinner></mat-spinner>
   </div>
 
-  <div class="row justify-content-center mt-3" *ngIf="!mobile && !tablet && loaded">
+  <div
+    class="row justify-content-center mt-3"
+    *ngIf="!mobile && !tablet && loaded"
+  >
     <div class="col text-center">
       <p class="display-4">Total cases: {{ totalCases | renderLongNumbers }}</p>
       <p class="display-4">New cases: + {{ newCases | renderLongNumbers }}</p>
-      <p class="display-4">Recovered: {{ recoveredCases | renderLongNumbers }}</p>
-      <p class="display-4">Active cases: {{ activeCases | renderLongNumbers }}</p>
-      <p class="display-4">Critical cases: {{ criticalCases | renderLongNumbers }}</p>
+      <p class="display-4">
+        Recovered: {{ recoveredCases | renderLongNumbers }}
+      </p>
+      <p class="display-4">
+        Active cases: {{ activeCases | renderLongNumbers }}
+      </p>
+      <p class="display-4">
+        Critical cases: {{ criticalCases | renderLongNumbers }}
+      </p>
       <p class="display-4">New deaths: + {{ newDeaths | renderLongNumbers }}</p>
-      <p class="display-4">Total deaths: {{ totalDeaths | renderLongNumbers }}</p>
-      <p *ngIf="tests" class="display-4">Tests: {{ tests | renderLongNumbers }}</p>
+      <p class="display-4">
+        Total deaths: {{ totalDeaths | renderLongNumbers }}
+      </p>
+      <p *ngIf="tests" class="display-4">
+        Tests: {{ tests | renderLongNumbers }}
+      </p>
     </div>
   </div>
 
