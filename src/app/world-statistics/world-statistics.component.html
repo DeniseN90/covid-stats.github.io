@@ -214,7 +214,7 @@
       <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
         New cases
       </th>
-      <td class="text-center table-warning" mat-cell *matCellDef="let element">
+      <td id="background-color-warning" class="text-center table-warning dark-theme-class" mat-cell *matCellDef="let element">
         {{ element.casesNew | renderLongNumbers }}
       </td>
     </ng-container>
@@ -238,7 +238,7 @@
       <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
         Recovered
       </th>
-      <td class="text-center table-success" mat-cell *matCellDef="let element">
+      <td id="background-color-success" class="text-center table-success dark-theme-class" mat-cell *matCellDef="let element">
         {{ element.casesRecovered | renderLongNumbers }}
       </td>
     </ng-container>
@@ -254,7 +254,7 @@
       <th class="text-uppercase" mat-header-cell *matHeaderCellDef>
         Total deaths
       </th>
-      <td class="table-danger text-center" mat-cell *matCellDef="let element">
+      <td id="background-color-danger" class="table-danger text-center dark-theme-class" mat-cell *matCellDef="let element">
         {{ element.deathsTotal | renderLongNumbers }}
       </td>
     </ng-container>
