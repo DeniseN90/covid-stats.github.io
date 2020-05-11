@@ -45,7 +45,6 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     RateChartComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -63,7 +62,8 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     FormsModule,
     MatInputModule,
     NgxGoogleAnalyticsModule.forRoot('UA-90688399-7'),
-    NgxGoogleAnalyticsRouterModule
+    NgxGoogleAnalyticsRouterModule,
+    AppRoutingModule,
   ],
   exports: [RouterModule],
   providers: [RenderLongNumbersPipe, Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
