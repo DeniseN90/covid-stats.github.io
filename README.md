@@ -61,6 +61,12 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 
+## CD / CI
+The file .workflows/build.yml manages the build and deploy, done upon commit.
+The node_modules are cached if changes were not made to the package.json
+
+
+
 
 
 
