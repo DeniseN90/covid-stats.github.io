@@ -17,10 +17,12 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
   countries: string[];
 
   selectedCountry: string;
+  selectedTimeRange: number;
   inputData: any[];
   dataLabels: any[];
   loaded: boolean;
-  mobile: boolean;
+  isMobile: boolean;
+  timeRanges: any[]
 
   searchFilter = new FormControl('');
 
@@ -30,11 +32,30 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
 
   @ViewChild('select', { static: true }) select: MatSelect;
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService) {
+    this.isMobile = appService.isMobile;
+    this.timeRanges = [ 
+      {
+        value: 10,
+        label: 'Last 10 days'
+      }, 
+      {
+        value: 20,
+        label: 'Last 20 days'
+      }, 
+      {
+        value: 30,
+        label: 'Last 30 days'
+      }, 
+      {
+        value: 40,
+        label: 'Last 40 days'
+      }
+    ];
+  }
 
   ngOnInit(): void {
     this.getAllCountries();
-    this.mobile = window.screen.width < 560;
     this.dataLabels = [];
     this.searchFilter.valueChanges
       .pipe(takeUntil(this._onDestroy))
@@ -73,13 +94,26 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
     this.getCountryHistory(event.value);
   }
 
+  selectTimeRange(event) {
+    this.selectedTimeRange = event.value;
+    this.setTimeRange(event.value);
+  }
+
+  private setTimeRange(timeRange: number) {
+    this.inputData = this.appService.countryStat.slice(0, timeRange);
+    this.dataLabels = ChartUtils.getChartLabels(this.inputData);
+  }
+
   private getCountryHistory(country: string) {
     this.loaded = false;
     this.appService.getHistory(country).subscribe(
       (data) => {
-        let reversed = data.response.reverse();
-        this.inputData = ChartUtils.getCleanedData(reversed);
-        this.dataLabels = ChartUtils.getChartLabels(reversed);
+        let cleanedData = ChartUtils.getCleanedData(data.response);
+        // initializa time range to 40
+        this.selectedTimeRange = 40;
+        this.inputData = cleanedData.slice(0, this.selectedTimeRange).reverse();
+        this.appService.countryStat = this.inputData;
+        this.dataLabels = ChartUtils.getChartLabels(this.inputData);
         this.loaded = true;
       },
       (data) => {

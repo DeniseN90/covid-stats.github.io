@@ -9,7 +9,7 @@ import { CountryRow } from '../shared/model/model';
   templateUrl: './world-statistics.component.html',
   styleUrls: ['./world-statistics.component.css'],
 })
-export class WorldStatisticsComponent implements OnInit {
+export class WorldStatisticsComponent {
   error: string;
   dataSource: any;
   sortedData: any;
@@ -45,7 +45,7 @@ export class WorldStatisticsComponent implements OnInit {
   worldCumulativeStats: CountryRow[];
 
   countriesData: boolean;
-  cumulativeData: boolean;
+  continentsData: boolean;
 
   cumulativeDataSource: any;
 
@@ -56,12 +56,10 @@ export class WorldStatisticsComponent implements OnInit {
     this.worldStats = [];
     this.getWorldStats();
     this.countriesData = true;
-    this.cumulativeData = false;
+    this.continentsData = false;
+    this.mobile = appService.isMobile;
   }
 
-  ngOnInit(): void {
-    this.mobile = window.screen.width < 560;
-  }
 
   private getWorldStats() {
     this.appService.getWorldStats().subscribe(
@@ -154,7 +152,7 @@ export class WorldStatisticsComponent implements OnInit {
 
   showCountriesOrCumulative(event) {
     this.countriesData = (event.target.value === 'countriesData');
-    this.cumulativeData = (event.target.value === 'cumulativeData');
+    this.continentsData = (event.target.value === 'cumulativeData');
   }
 
 }

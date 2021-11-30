@@ -7,12 +7,14 @@ import { HttpClient } from '@angular/common/http';
 export class AppService {
   constructor(private http: HttpClient) {
     this.getAllCountries();
+    this.isMobile = window.screen.width < 560;
    }
   error: string;
 
   countries: string[];
   worldStats: any;
   countryStat: any;
+  isMobile: boolean;
 
   headers =  {
     'x-rapidapi-host': 'covid-193.p.rapidapi.com',

@@ -22,7 +22,7 @@
             value="cumulativeData"
             autocomplete="off"
           />
-          Cumulative
+          Continents
         </label>
       </div>
     </div>
@@ -190,7 +190,7 @@
 </div>
 
 <!-- DESKTOP VERSION, CUMULATIVE-->
-<div class="container-fluid" *ngIf="!mobile && cumulativeData">
+<div class="container-fluid" *ngIf="!mobile && continentsData">
   <table
     mat-table
     [dataSource]="cumulativeDataSource"
@@ -329,7 +329,7 @@
 </div>
 
 <!-- MOBILE VERSION, CUMULATIVE DATA-->
-<div class="container-fluid" *ngIf="mobile && cumulativeData">
+<div class="container-fluid" *ngIf="mobile && continentsData">
   <mat-accordion>
     <mat-expansion-panel *ngFor="let country of worldCumulativeStats">
       <mat-expansion-panel-header>

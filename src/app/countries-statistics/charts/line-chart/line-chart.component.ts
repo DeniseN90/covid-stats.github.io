@@ -74,8 +74,10 @@ export class LineChartComponent implements OnInit, OnChanges {
     totalCasesDataSet.data = ChartUtils.getCases(this.inputData, 'total'); 
     this.lineChartData.push(totalCasesDataSet);
 
+    // establish limits based on higher data
     this.getLimit(totalCasesDataSet.data);
 
+    // new cases
     let newCasesDataSet: ChartDataSets = {};
     newCasesDataSet.label = 'New cases';
     this.lineChartColors.push({
@@ -84,6 +86,7 @@ export class LineChartComponent implements OnInit, OnChanges {
     });
     newCasesDataSet.data = ChartUtils.getCases(this.inputData, 'new');
     this.lineChartData.push(newCasesDataSet);
+    // critical cases
     let criticalCasesDataSet: ChartDataSets = {};
     criticalCasesDataSet.label = 'Critical cases';
     this.lineChartColors.push({
@@ -93,6 +96,7 @@ export class LineChartComponent implements OnInit, OnChanges {
     criticalCasesDataSet.data = ChartUtils.getCases(this.inputData, 'critical');
     this.lineChartData.push(criticalCasesDataSet);
 
+    // active cases
     let activeCasesDataSet: ChartDataSets = {};
     activeCasesDataSet.label = 'Active cases';
     this.lineChartColors.push({
@@ -101,6 +105,8 @@ export class LineChartComponent implements OnInit, OnChanges {
     });
     activeCasesDataSet.data = ChartUtils.getCases(this.inputData, 'active');
     this.lineChartData.push(activeCasesDataSet);
+    
+    // recovered cases
     let recoveredCasesDataSet: ChartDataSets = {};
     recoveredCasesDataSet.label = 'Recovered cases';
     this.lineChartColors.push({
@@ -110,6 +116,7 @@ export class LineChartComponent implements OnInit, OnChanges {
     recoveredCasesDataSet.data = ChartUtils.getCases(this.inputData, 'recovered'); 
     this.lineChartData.push(recoveredCasesDataSet);
 
+    // new deaths
     let newDeathsDataSet: ChartDataSets = {};
     newDeathsDataSet.label = 'New deaths';
     this.lineChartColors.push({
@@ -119,6 +126,7 @@ export class LineChartComponent implements OnInit, OnChanges {
     newDeathsDataSet.data = ChartUtils.getDeaths(this.inputData, 'new');
     this.lineChartData.push(newDeathsDataSet);
 
+    // total deaths
     let totalDeathsDataSet: ChartDataSets = {};
     totalDeathsDataSet.label = 'Total deaths';
     this.lineChartColors.push({
@@ -144,9 +152,10 @@ export class LineChartComponent implements OnInit, OnChanges {
     this.lineChartOptions.scales.yAxes[0].ticks.stepSize = step;
   }
 
-  updateConfigAsNewObject(lineChartOptions) {
+  private updateConfigAsNewObject(lineChartOptions) {
     this.lineChart.chart.config.options = lineChartOptions;
     // update chart options on DOM
     this.lineChart.ngOnChanges({} as SimpleChanges);
   }
+
 }

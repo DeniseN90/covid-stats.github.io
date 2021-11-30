@@ -25,7 +25,23 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div *ngIf="!mobile" class="col h3 text-center align-self-center">
+    <div class="col m-3 text-center">
+      <mat-form-field>
+        <mat-label>Select the time range</mat-label>
+        <mat-select
+          [(value)]="selectedTimeRange"
+          #select
+          (selectionChange)="selectTimeRange($event)"
+        >
+          <mat-option *ngFor="let range of timeRanges" [value]="range.value">
+            {{ range.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div *ngIf="!isMobile" class="col h3 text-center align-self-center">
       {{ selectedCountry }}
     </div>
   </div>
@@ -34,23 +50,29 @@
 <div class="container-fluid">
   <!--DESKTOP CHART-->
   <linechart-component
-    *ngIf="!mobile"
+    *ngIf="!isMobile"
     [lineChartLabels]="dataLabels"
     [inputData]="inputData"
   ></linechart-component>
   <!--MOBILE CHART-->
   <bar-chart-mobile-component
-    *ngIf="mobile"
+    *ngIf="isMobile"
     [barChartLabels]="dataLabels"
     [inputData]="inputData"
   ></bar-chart-mobile-component>
 
   <!--DOUGHNUT CHART-->
-  <doughnut-component [inputData]="inputData"> </doughnut-component>
+  <div class="container doughnut-chart">
+    <doughnut-component [inputData]="inputData"> </doughnut-component>
+  </div>
 
   <!-- RATE CHART-->
-  <ratechart-component
-    [inputData]="inputData"
-    [rateChartLabels]="dataLabels"
-  ></ratechart-component>
+  <div class="container rate-chart">
+    
+    <ratechart-component
+      [inputData]="inputData"
+      [rateChartLabels]="dataLabels"
+    ></ratechart-component>
+
+</div>
 </div>
