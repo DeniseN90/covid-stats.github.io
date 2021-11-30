@@ -2,9 +2,9 @@ function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableTo
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
@@ -83,6 +83,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./bm": "./node_modules/moment/locale/bm.js",
       "./bm.js": "./node_modules/moment/locale/bm.js",
       "./bn": "./node_modules/moment/locale/bn.js",
+      "./bn-bd": "./node_modules/moment/locale/bn-bd.js",
+      "./bn-bd.js": "./node_modules/moment/locale/bn-bd.js",
       "./bn.js": "./node_modules/moment/locale/bn.js",
       "./bo": "./node_modules/moment/locale/bo.js",
       "./bo.js": "./node_modules/moment/locale/bo.js",
@@ -110,8 +112,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./dv.js": "./node_modules/moment/locale/dv.js",
       "./el": "./node_modules/moment/locale/el.js",
       "./el.js": "./node_modules/moment/locale/el.js",
-      "./en-SG": "./node_modules/moment/locale/en-SG.js",
-      "./en-SG.js": "./node_modules/moment/locale/en-SG.js",
       "./en-au": "./node_modules/moment/locale/en-au.js",
       "./en-au.js": "./node_modules/moment/locale/en-au.js",
       "./en-ca": "./node_modules/moment/locale/en-ca.js",
@@ -122,13 +122,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./en-ie.js": "./node_modules/moment/locale/en-ie.js",
       "./en-il": "./node_modules/moment/locale/en-il.js",
       "./en-il.js": "./node_modules/moment/locale/en-il.js",
+      "./en-in": "./node_modules/moment/locale/en-in.js",
+      "./en-in.js": "./node_modules/moment/locale/en-in.js",
       "./en-nz": "./node_modules/moment/locale/en-nz.js",
       "./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+      "./en-sg": "./node_modules/moment/locale/en-sg.js",
+      "./en-sg.js": "./node_modules/moment/locale/en-sg.js",
       "./eo": "./node_modules/moment/locale/eo.js",
       "./eo.js": "./node_modules/moment/locale/eo.js",
       "./es": "./node_modules/moment/locale/es.js",
       "./es-do": "./node_modules/moment/locale/es-do.js",
       "./es-do.js": "./node_modules/moment/locale/es-do.js",
+      "./es-mx": "./node_modules/moment/locale/es-mx.js",
+      "./es-mx.js": "./node_modules/moment/locale/es-mx.js",
       "./es-us": "./node_modules/moment/locale/es-us.js",
       "./es-us.js": "./node_modules/moment/locale/es-us.js",
       "./es.js": "./node_modules/moment/locale/es.js",
@@ -140,6 +146,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./fa.js": "./node_modules/moment/locale/fa.js",
       "./fi": "./node_modules/moment/locale/fi.js",
       "./fi.js": "./node_modules/moment/locale/fi.js",
+      "./fil": "./node_modules/moment/locale/fil.js",
+      "./fil.js": "./node_modules/moment/locale/fil.js",
       "./fo": "./node_modules/moment/locale/fo.js",
       "./fo.js": "./node_modules/moment/locale/fo.js",
       "./fr": "./node_modules/moment/locale/fr.js",
@@ -156,6 +164,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./gd.js": "./node_modules/moment/locale/gd.js",
       "./gl": "./node_modules/moment/locale/gl.js",
       "./gl.js": "./node_modules/moment/locale/gl.js",
+      "./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+      "./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
       "./gom-latn": "./node_modules/moment/locale/gom-latn.js",
       "./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
       "./gu": "./node_modules/moment/locale/gu.js",
@@ -234,6 +244,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./nl.js": "./node_modules/moment/locale/nl.js",
       "./nn": "./node_modules/moment/locale/nn.js",
       "./nn.js": "./node_modules/moment/locale/nn.js",
+      "./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+      "./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
       "./pa-in": "./node_modules/moment/locale/pa-in.js",
       "./pa-in.js": "./node_modules/moment/locale/pa-in.js",
       "./pl": "./node_modules/moment/locale/pl.js",
@@ -278,6 +290,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./tg.js": "./node_modules/moment/locale/tg.js",
       "./th": "./node_modules/moment/locale/th.js",
       "./th.js": "./node_modules/moment/locale/th.js",
+      "./tk": "./node_modules/moment/locale/tk.js",
+      "./tk.js": "./node_modules/moment/locale/tk.js",
       "./tl-ph": "./node_modules/moment/locale/tl-ph.js",
       "./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
       "./tlh": "./node_modules/moment/locale/tlh.js",
@@ -310,6 +324,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
       "./zh-hk": "./node_modules/moment/locale/zh-hk.js",
       "./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+      "./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+      "./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
       "./zh-tw": "./node_modules/moment/locale/zh-tw.js",
       "./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
     };
@@ -3618,13 +3634,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(ChartUtils, null, [{
         key: "getCleanedData",
-
+        value:
         /**
          * The country data are copied in another array,
          * check for same days data
          * @param data the country data
          */
-        value: function getCleanedData(data) {
+        function getCleanedData(data) {
           var cleanData = [];
           var labels = [];
           data.forEach(function (element) {
@@ -3893,14 +3909,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       _createClass(Utils, null, [{
         key: "roundGrowthRate",
-
+        value:
         /**
          * Takes the number, which is a decimal,
          * and gives back the upper (and lower)
          * limit for the chart and the step size
          * @param n number to round to limit
          */
-        value: function roundGrowthRate(n) {
+        function roundGrowthRate(n) {
           var temp = Math.floor(n);
           var limitValue = '1';
 
@@ -5385,6 +5401,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(WorldStatisticsComponent, [{
+        key: "matSort",
+        set: function set(ms) {
+          this.sort = ms;
+        }
+      }, {
         key: "getWorldStats",
         value: function getWorldStats() {
           var _this7 = this;
@@ -5481,11 +5502,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function showCountriesOrCumulative(event) {
           this.countriesData = event.target.value === 'countriesData';
           this.continentsData = event.target.value === 'cumulativeData';
-        }
-      }, {
-        key: "matSort",
-        set: function set(ms) {
-          this.sort = ms;
         }
       }]);
 
