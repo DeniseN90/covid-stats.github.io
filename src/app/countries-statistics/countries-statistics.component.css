@@ -9,3 +9,11 @@ mat-spinner {
 .container.doughnut-chart {
     max-width: 50%;
 }
+
+.container.doughnut-chart.isMobile {
+    max-width: 100%;
+}
+
+.container.rate-chart.isMobile {
+    max-width: 100%;
+}

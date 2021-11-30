@@ -62,12 +62,12 @@
   ></bar-chart-mobile-component>
 
   <!--DOUGHNUT CHART-->
-  <div class="container doughnut-chart">
+  <div class="container doughnut-chart" [ngClass]="{'isMobile' : isMobile == true}">
     <doughnut-component [inputData]="inputData"> </doughnut-component>
   </div>
 
   <!-- RATE CHART-->
-  <div class="container rate-chart">
+  <div class="container rate-chart mb-5" [ngClass]="{'isMobile' : isMobile == true}">
     
     <ratechart-component
       [inputData]="inputData"
