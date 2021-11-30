@@ -409,7 +409,7 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("dark-theme", ctx.otherTheme);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("dark-theme", ctx.otherTheme);
-    } }, directives: [_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], styles: ["div.container-fluid[_ngcontent-%COMP%] {\r\n  min-height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\nmain[_ngcontent-%COMP%] {\r\n  flex: 1 0 auto;\r\n}\r\n\r\n.mat-app-background[_ngcontent-%COMP%] {\r\n  height: 100%;\r\n  overflow: scroll;\r\n}\r\n\r\nrouter-outlet[_ngcontent-%COMP%]  {\r\n  overflow: hidden;\r\n  margin: 0;\r\n  height: 100%;\r\n  box-sizing: border-box;\r\n  color: #e0e0e0;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsYUFBYTtFQUNiLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZ0JBQWdCO0FBQ2xCOztBQUdBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxZQUFZO0VBQ1osc0JBQXNCO0VBQ3RCLGNBQWM7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdi5jb250YWluZXItZmx1aWQge1xyXG4gIG1pbi1oZWlnaHQ6IDEwMCU7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG5tYWluIHtcclxuICBmbGV4OiAxIDAgYXV0bztcclxufVxyXG5cclxuLm1hdC1hcHAtYmFja2dyb3VuZCB7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIG92ZXJmbG93OiBzY3JvbGw7XHJcbn1cclxuXHJcblxyXG5yb3V0ZXItb3V0bGV0ICB7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICBtYXJnaW46IDA7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgY29sb3I6ICNlMGUwZTA7XHJcbn1cclxuXHJcbiJdfQ== */"] });
+    } }, directives: [_header_header_component__WEBPACK_IMPORTED_MODULE_4__["HeaderComponent"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], styles: ["div.container-fluid[_ngcontent-%COMP%] {\n  min-height: 100%;\n  display: flex;\n  flex-direction: column;\n}\n\nmain[_ngcontent-%COMP%] {\n  flex: 1 0 auto;\n}\n\n.mat-app-background[_ngcontent-%COMP%] {\n  height: 100%;\n  overflow: scroll;\n}\n\nrouter-outlet[_ngcontent-%COMP%]  {\n  overflow: hidden;\n  margin: 0;\n  height: 100%;\n  box-sizing: border-box;\n  color: #e0e0e0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQkFBZ0I7RUFDaEIsYUFBYTtFQUNiLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osZ0JBQWdCO0FBQ2xCOztBQUdBO0VBQ0UsZ0JBQWdCO0VBQ2hCLFNBQVM7RUFDVCxZQUFZO0VBQ1osc0JBQXNCO0VBQ3RCLGNBQWM7QUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdi5jb250YWluZXItZmx1aWQge1xuICBtaW4taGVpZ2h0OiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG5tYWluIHtcbiAgZmxleDogMSAwIGF1dG87XG59XG5cbi5tYXQtYXBwLWJhY2tncm91bmQge1xuICBoZWlnaHQ6IDEwMCU7XG4gIG92ZXJmbG93OiBzY3JvbGw7XG59XG5cblxucm91dGVyLW91dGxldCAge1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBtYXJnaW46IDA7XG4gIGhlaWdodDogMTAwJTtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgY29sb3I6ICNlMGUwZTA7XG59XG5cbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -616,6 +616,7 @@ class AppService {
             'x-rapidapi-key': '41644c2f8cmsh4fcb03bb7b5648ap193587jsn102b4f01579c'
         };
         this.getAllCountries();
+        this.isMobile = window.screen.width < 560;
     }
     getWorldStats() {
         const requestOptions = { headers: this.headers };
@@ -807,7 +808,9 @@ class LineChartComponent {
         });
         totalCasesDataSet.data = src_app_shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_3__["ChartUtils"].getCases(this.inputData, 'total');
         this.lineChartData.push(totalCasesDataSet);
+        // establish limits based on higher data
         this.getLimit(totalCasesDataSet.data);
+        // new cases
         let newCasesDataSet = {};
         newCasesDataSet.label = 'New cases';
         this.lineChartColors.push({
@@ -816,6 +819,7 @@ class LineChartComponent {
         });
         newCasesDataSet.data = src_app_shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_3__["ChartUtils"].getCases(this.inputData, 'new');
         this.lineChartData.push(newCasesDataSet);
+        // critical cases
         let criticalCasesDataSet = {};
         criticalCasesDataSet.label = 'Critical cases';
         this.lineChartColors.push({
@@ -824,6 +828,7 @@ class LineChartComponent {
         });
         criticalCasesDataSet.data = src_app_shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_3__["ChartUtils"].getCases(this.inputData, 'critical');
         this.lineChartData.push(criticalCasesDataSet);
+        // active cases
         let activeCasesDataSet = {};
         activeCasesDataSet.label = 'Active cases';
         this.lineChartColors.push({
@@ -832,6 +837,7 @@ class LineChartComponent {
         });
         activeCasesDataSet.data = src_app_shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_3__["ChartUtils"].getCases(this.inputData, 'active');
         this.lineChartData.push(activeCasesDataSet);
+        // recovered cases
         let recoveredCasesDataSet = {};
         recoveredCasesDataSet.label = 'Recovered cases';
         this.lineChartColors.push({
@@ -840,6 +846,7 @@ class LineChartComponent {
         });
         recoveredCasesDataSet.data = src_app_shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_3__["ChartUtils"].getCases(this.inputData, 'recovered');
         this.lineChartData.push(recoveredCasesDataSet);
+        // new deaths
         let newDeathsDataSet = {};
         newDeathsDataSet.label = 'New deaths';
         this.lineChartColors.push({
@@ -848,6 +855,7 @@ class LineChartComponent {
         });
         newDeathsDataSet.data = src_app_shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_3__["ChartUtils"].getDeaths(this.inputData, 'new');
         this.lineChartData.push(newDeathsDataSet);
+        // total deaths
         let totalDeathsDataSet = {};
         totalDeathsDataSet.label = 'Total deaths';
         this.lineChartColors.push({
@@ -1382,35 +1390,45 @@ function CountriesStatisticsComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function CountriesStatisticsComponent_mat_option_12_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const country_r6 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", country_r6);
+    const country_r8 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", country_r8);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", country_r6, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", country_r8, " ");
 } }
-function CountriesStatisticsComponent_div_14_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 15);
+function CountriesStatisticsComponent_mat_option_20_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    const range_r9 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", range_r9.value);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r3.selectedCountry, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", range_r9.label, " ");
 } }
-function CountriesStatisticsComponent_linechart_component_16_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "linechart-component", 16);
-} if (rf & 2) {
-    const ctx_r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("lineChartLabels", ctx_r4.dataLabels)("inputData", ctx_r4.inputData);
-} }
-function CountriesStatisticsComponent_bar_chart_mobile_component_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "bar-chart-mobile-component", 17);
+function CountriesStatisticsComponent_div_22_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("barChartLabels", ctx_r5.dataLabels)("inputData", ctx_r5.inputData);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx_r5.selectedCountry, " ");
+} }
+function CountriesStatisticsComponent_linechart_component_24_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "linechart-component", 19);
+} if (rf & 2) {
+    const ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("lineChartLabels", ctx_r6.dataLabels)("inputData", ctx_r6.inputData);
+} }
+function CountriesStatisticsComponent_bar_chart_mobile_component_25_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "bar-chart-mobile-component", 20);
+} if (rf & 2) {
+    const ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("barChartLabels", ctx_r7.dataLabels)("inputData", ctx_r7.inputData);
 } }
 class CountriesStatisticsComponent {
     constructor(appService) {
@@ -1418,10 +1436,28 @@ class CountriesStatisticsComponent {
         this.searchFilter = new _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControl"]('');
         this._onDestroy = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
         this.filteredCountries = new rxjs__WEBPACK_IMPORTED_MODULE_2__["ReplaySubject"](1);
+        this.isMobile = appService.isMobile;
+        this.timeRanges = [
+            {
+                value: 10,
+                label: 'Last 10 days'
+            },
+            {
+                value: 20,
+                label: 'Last 20 days'
+            },
+            {
+                value: 30,
+                label: 'Last 30 days'
+            },
+            {
+                value: 40,
+                label: 'Last 40 days'
+            }
+        ];
     }
     ngOnInit() {
         this.getAllCountries();
-        this.mobile = window.screen.width < 560;
         this.dataLabels = [];
         this.searchFilter.valueChanges
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["takeUntil"])(this._onDestroy))
@@ -1452,12 +1488,23 @@ class CountriesStatisticsComponent {
         this.selectedCountry = event.value;
         this.getCountryHistory(event.value);
     }
+    selectTimeRange(event) {
+        this.selectedTimeRange = event.value;
+        this.setTimeRange(event.value);
+    }
+    setTimeRange(timeRange) {
+        this.inputData = this.appService.countryStat.slice(0, timeRange);
+        this.dataLabels = _shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_4__["ChartUtils"].getChartLabels(this.inputData);
+    }
     getCountryHistory(country) {
         this.loaded = false;
         this.appService.getHistory(country).subscribe((data) => {
-            let reversed = data.response.reverse();
-            this.inputData = _shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_4__["ChartUtils"].getCleanedData(reversed);
-            this.dataLabels = _shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_4__["ChartUtils"].getChartLabels(reversed);
+            let cleanedData = _shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_4__["ChartUtils"].getCleanedData(data.response);
+            // initializa time range to 40
+            this.selectedTimeRange = 40;
+            this.inputData = cleanedData.slice(0, this.selectedTimeRange).reverse();
+            this.appService.countryStat = this.inputData;
+            this.dataLabels = _shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_4__["ChartUtils"].getChartLabels(this.inputData);
             this.loaded = true;
         }, (data) => {
             this.error = data.errors;
@@ -1488,7 +1535,7 @@ CountriesStatisticsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.select = _t.first);
-    } }, decls: 20, vars: 11, consts: [[1, "container-fluid"], [1, "row", "mt-3", "justify-content-center"], [4, "ngIf"], [1, "row", "mt-5"], [1, "col", "m-3", "text-center"], [3, "selectionChange"], ["select", ""], ["placeholderLabel", "", "noEntriesFoundLabel", "no country found", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["class", "col h3 text-center align-self-center", 4, "ngIf"], [3, "lineChartLabels", "inputData", 4, "ngIf"], [3, "barChartLabels", "inputData", 4, "ngIf"], [3, "inputData"], [3, "inputData", "rateChartLabels"], [3, "value"], [1, "col", "h3", "text-center", "align-self-center"], [3, "lineChartLabels", "inputData"], [3, "barChartLabels", "inputData"]], template: function CountriesStatisticsComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 30, vars: 13, consts: [[1, "container-fluid"], [1, "row", "mt-3", "justify-content-center"], [4, "ngIf"], [1, "row", "mt-5"], [1, "col", "m-3", "text-center"], [3, "selectionChange"], ["select", ""], ["placeholderLabel", "", "noEntriesFoundLabel", "no country found", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value", "valueChange", "selectionChange"], ["class", "col h3 text-center align-self-center", 4, "ngIf"], [3, "lineChartLabels", "inputData", 4, "ngIf"], [3, "barChartLabels", "inputData", 4, "ngIf"], [1, "container", "doughnut-chart"], [3, "inputData"], [1, "container", "rate-chart"], [3, "inputData", "rateChartLabels"], [3, "value"], [1, "col", "h3", "text-center", "align-self-center"], [3, "lineChartLabels", "inputData"], [3, "barChartLabels", "inputData"]], template: function CountriesStatisticsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, CountriesStatisticsComponent_div_2_Template, 2, 0, "div", 2);
@@ -1509,14 +1556,31 @@ CountriesStatisticsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, CountriesStatisticsComponent_div_14_Template, 2, 1, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-form-field");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-label");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Select the time range");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-select", 9, 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("valueChange", function CountriesStatisticsComponent_Template_mat_select_valueChange_18_listener($event) { return ctx.selectedTimeRange = $event; })("selectionChange", function CountriesStatisticsComponent_Template_mat_select_selectionChange_18_listener($event) { return ctx.selectTimeRange($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, CountriesStatisticsComponent_mat_option_20_Template, 2, 2, "mat-option", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, CountriesStatisticsComponent_linechart_component_16_Template, 1, 2, "linechart-component", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, CountriesStatisticsComponent_bar_chart_mobile_component_17_Template, 1, 2, "bar-chart-mobile-component", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "doughnut-component", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "ratechart-component", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, CountriesStatisticsComponent_div_22_Template, 2, 1, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, CountriesStatisticsComponent_linechart_component_24_Template, 1, 2, "linechart-component", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, CountriesStatisticsComponent_bar_chart_mobile_component_25_Template, 1, 2, "bar-chart-mobile-component", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "doughnut-component", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "ratechart-component", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -1524,18 +1588,22 @@ CountriesStatisticsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__[
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formControl", ctx.searchFilter);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](13, 9, ctx.filteredCountries));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](13, 11, ctx.filteredCountries));
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", ctx.selectedTimeRange);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.mobile);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.timeRanges);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.mobile);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.isMobile);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.isMobile);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.mobile);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.isMobile);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inputData", ctx.inputData);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inputData", ctx.inputData)("rateChartLabels", ctx.dataLabels);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_8__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_9__["MatOption"], ngx_mat_select_search__WEBPACK_IMPORTED_MODULE_10__["MatSelectSearchComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _charts_doughnut_chart_doughnut_chart_component__WEBPACK_IMPORTED_MODULE_11__["DoughnutChartComponent"], _charts_rate_chart_ratechart_component__WEBPACK_IMPORTED_MODULE_12__["RateChartComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatSpinner"], _charts_line_chart_line_chart_component__WEBPACK_IMPORTED_MODULE_14__["LineChartComponent"], _charts_mobile_charts_bar_chart_mobile_component__WEBPACK_IMPORTED_MODULE_15__["BarChartMobileComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["AsyncPipe"]], styles: ["mat-spinner[_ngcontent-%COMP%] {\r\n    margin: 0 auto;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY291bnRyaWVzLXN0YXRpc3RpY3MvY291bnRyaWVzLXN0YXRpc3RpY3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7QUFDbEIiLCJmaWxlIjoic3JjL2FwcC9jb3VudHJpZXMtc3RhdGlzdGljcy9jb3VudHJpZXMtc3RhdGlzdGljcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXNwaW5uZXIge1xyXG4gICAgbWFyZ2luOiAwIGF1dG87XHJcbn0iXX0= */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_7__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_8__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_9__["MatOption"], ngx_mat_select_search__WEBPACK_IMPORTED_MODULE_10__["MatSelectSearchComponent"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _charts_doughnut_chart_doughnut_chart_component__WEBPACK_IMPORTED_MODULE_11__["DoughnutChartComponent"], _charts_rate_chart_ratechart_component__WEBPACK_IMPORTED_MODULE_12__["RateChartComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_13__["MatSpinner"], _charts_line_chart_line_chart_component__WEBPACK_IMPORTED_MODULE_14__["LineChartComponent"], _charts_mobile_charts_bar_chart_mobile_component__WEBPACK_IMPORTED_MODULE_15__["BarChartMobileComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["AsyncPipe"]], styles: ["mat-spinner[_ngcontent-%COMP%] {\n    margin: 0 auto;\n}\n\n.container.rate-chart[_ngcontent-%COMP%] {\n    max-width: 50%;\n}\n\n.container.doughnut-chart[_ngcontent-%COMP%] {\n    max-width: 50%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY291bnRyaWVzLXN0YXRpc3RpY3MvY291bnRyaWVzLXN0YXRpc3RpY3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvdW50cmllcy1zdGF0aXN0aWNzL2NvdW50cmllcy1zdGF0aXN0aWNzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJtYXQtc3Bpbm5lciB7XG4gICAgbWFyZ2luOiAwIGF1dG87XG59XG5cbi5jb250YWluZXIucmF0ZS1jaGFydCB7XG4gICAgbWF4LXdpZHRoOiA1MCU7XG59XG5cbi5jb250YWluZXIuZG91Z2hudXQtY2hhcnQge1xuICAgIG1heC13aWR0aDogNTAlO1xufSJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CountriesStatisticsComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1585,7 +1653,7 @@ FooterComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: ["div.container-fluid[_ngcontent-%COMP%] {\r\n  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBR0UsMkNBQTJDO0FBQzdDIiwiZmlsZSI6InNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lci1mbHVpZCB7XHJcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiAwIDNweCA1cHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xyXG4gIC1tb3otYm94LXNoYWRvdzogMCAzcHggNXB4IHJnYmEoNTcsIDYzLCA3MiwgMC4zKTtcclxuICBib3gtc2hhZG93OiAwIDNweCA1cHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xyXG59XHJcbiJdfQ== */"] });
+    } }, styles: ["div.container-fluid[_ngcontent-%COMP%] {\n  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBR0UsMkNBQTJDO0FBQzdDIiwiZmlsZSI6InNyYy9hcHAvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lci1mbHVpZCB7XG4gIC13ZWJraXQtYm94LXNoYWRvdzogMCAzcHggNXB4IHJnYmEoNTcsIDYzLCA3MiwgMC4zKTtcbiAgLW1vei1ib3gtc2hhZG93OiAwIDNweCA1cHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xuICBib3gtc2hhZG93OiAwIDNweCA1cHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xufVxuIl19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FooterComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1697,7 +1765,7 @@ HeaderComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("color", ctx.color);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Switch to ", ctx.otherMode, "");
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_2__["MatSlideToggle"]], styles: ["div.container-fluid[_ngcontent-%COMP%] {\r\n  box-shadow: 0 2px 3px rgba(57, 63, 72, 0.3);\r\n}\r\n\r\n.nav-tabs[_ngcontent-%COMP%]    > li[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%]:hover {\r\n  background-color: #303136 !important;\r\n    border: medium none;\r\n    border-radius: 0;\r\n    color:#fff;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBR0UsMkNBQTJDO0FBQzdDOztBQUVBO0VBQ0Usb0NBQW9DO0lBQ2xDLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lci1mbHVpZCB7XHJcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiAwIDJweCAzcHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xyXG4gIC1tb3otYm94LXNoYWRvdzogMCAycHggM3B4IHJnYmEoNTcsIDYzLCA3MiwgMC4zKTtcclxuICBib3gtc2hhZG93OiAwIDJweCAzcHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xyXG59XHJcblxyXG4ubmF2LXRhYnMgPiBsaSA+IGE6aG92ZXIge1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICMzMDMxMzYgIWltcG9ydGFudDtcclxuICAgIGJvcmRlcjogbWVkaXVtIG5vbmU7XHJcbiAgICBib3JkZXItcmFkaXVzOiAwO1xyXG4gICAgY29sb3I6I2ZmZjtcclxufVxyXG5cclxuIl19 */"] });
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_material_slide_toggle__WEBPACK_IMPORTED_MODULE_2__["MatSlideToggle"]], styles: ["div.container-fluid[_ngcontent-%COMP%] {\n  box-shadow: 0 2px 3px rgba(57, 63, 72, 0.3);\n}\n\n.nav-tabs[_ngcontent-%COMP%]    > li[_ngcontent-%COMP%]    > a[_ngcontent-%COMP%]:hover {\n  background-color: #303136 !important;\n    border: medium none;\n    border-radius: 0;\n    color:#fff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBR0UsMkNBQTJDO0FBQzdDOztBQUVBO0VBQ0Usb0NBQW9DO0lBQ2xDLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsVUFBVTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lci1mbHVpZCB7XG4gIC13ZWJraXQtYm94LXNoYWRvdzogMCAycHggM3B4IHJnYmEoNTcsIDYzLCA3MiwgMC4zKTtcbiAgLW1vei1ib3gtc2hhZG93OiAwIDJweCAzcHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xuICBib3gtc2hhZG93OiAwIDJweCAzcHggcmdiYSg1NywgNjMsIDcyLCAwLjMpO1xufVxuXG4ubmF2LXRhYnMgPiBsaSA+IGE6aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMzAzMTM2ICFpbXBvcnRhbnQ7XG4gICAgYm9yZGVyOiBtZWRpdW0gbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwO1xuICAgIGNvbG9yOiNmZmY7XG59XG5cbiJdfQ== */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HeaderComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -1993,7 +2061,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.tablet && ctx.loaded);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.mobile);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_3__["MatSpinner"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DatePipe"], _shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_4__["RenderLongNumbersPipe"]], styles: ["div.container-fluid[_ngcontent-%COMP%] {\r\n  background-image: url('world-image.jpg');\r\n  background-size: 100% 100%;\r\n  background-position: center;\r\n  background-clip: border-box;\r\n  background-repeat: no-repeat;\r\n  width: 100%;\r\n  height: 100%;\r\n  padding: 3rem;\r\n}\r\n\r\nmat-spinner[_ngcontent-%COMP%] {\r\n  margin: 0 auto;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx3Q0FBZ0Q7RUFDaEQsMEJBQTBCO0VBQzFCLDJCQUEyQjtFQUMzQiwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztBQUNoQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lci1mbHVpZCB7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogdXJsKC4uL2ltYWdlcy93b3JsZC1pbWFnZS5qcGcpO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogMTAwJSAxMDAlO1xyXG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcclxuICBiYWNrZ3JvdW5kLWNsaXA6IGJvcmRlci1ib3g7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgcGFkZGluZzogM3JlbTtcclxufVxyXG5cclxubWF0LXNwaW5uZXIge1xyXG4gIG1hcmdpbjogMCBhdXRvO1xyXG59XHJcbiJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_3__["MatSpinner"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["DatePipe"], _shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_4__["RenderLongNumbersPipe"]], styles: ["div.container-fluid[_ngcontent-%COMP%] {\n  background-image: url('world-image.jpg');\n  background-size: 100% 100%;\n  background-position: center;\n  background-clip: border-box;\n  background-repeat: no-repeat;\n  width: 100%;\n  height: 100%;\n  padding: 3rem;\n}\n\nmat-spinner[_ngcontent-%COMP%] {\n  margin: 0 auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSx3Q0FBZ0Q7RUFDaEQsMEJBQTBCO0VBQzFCLDJCQUEyQjtFQUMzQiwyQkFBMkI7RUFDM0IsNEJBQTRCO0VBQzVCLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtBQUNmOztBQUVBO0VBQ0UsY0FBYztBQUNoQiIsImZpbGUiOiJzcmMvYXBwL2hvbWUvaG9tZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2LmNvbnRhaW5lci1mbHVpZCB7XG4gIGJhY2tncm91bmQtaW1hZ2U6IHVybCguLi9pbWFnZXMvd29ybGQtaW1hZ2UuanBnKTtcbiAgYmFja2dyb3VuZC1zaXplOiAxMDAlIDEwMCU7XG4gIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgYmFja2dyb3VuZC1jbGlwOiBib3JkZXItYm94O1xuICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwYWRkaW5nOiAzcmVtO1xufVxuXG5tYXQtc3Bpbm5lciB7XG4gIG1hcmdpbjogMCBhdXRvO1xufVxuIl19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HomeComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -2998,13 +3066,11 @@ class WorldStatisticsComponent {
         this.worldStats = [];
         this.getWorldStats();
         this.countriesData = true;
-        this.cumulativeData = false;
+        this.continentsData = false;
+        this.mobile = appService.isMobile;
     }
     set matSort(ms) {
         this.sort = ms;
-    }
-    ngOnInit() {
-        this.mobile = window.screen.width < 560;
     }
     getWorldStats() {
         this.appService.getWorldStats().subscribe((data) => {
@@ -3076,7 +3142,7 @@ class WorldStatisticsComponent {
     }
     showCountriesOrCumulative(event) {
         this.countriesData = (event.target.value === 'countriesData');
-        this.cumulativeData = (event.target.value === 'cumulativeData');
+        this.continentsData = (event.target.value === 'cumulativeData');
     }
 }
 WorldStatisticsComponent.ɵfac = function WorldStatisticsComponent_Factory(t) { return new (t || WorldStatisticsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_app_service__WEBPACK_IMPORTED_MODULE_4__["AppService"])); };
@@ -3106,7 +3172,7 @@ WorldStatisticsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "input", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function WorldStatisticsComponent_Template_input_click_12_listener($event) { return ctx.showCountriesOrCumulative($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Cumulative ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " Continents ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3126,12 +3192,12 @@ WorldStatisticsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.mobile && ctx.countriesData);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.mobile && ctx.cumulativeData);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.mobile && ctx.continentsData);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.mobile && ctx.countriesData);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.mobile && ctx.cumulativeData);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatSpinner"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabGroup"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTab"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabLabel"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTable"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSort"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCell"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSortHeader"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRow"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInput"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatAccordion"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatExpansionPanel"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatExpansionPanelHeader"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatExpansionPanelTitle"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DatePipe"], _shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_12__["RenderLongNumbersPipe"]], styles: ["mat-tab-group[_ngcontent-%COMP%] {\r\n  height: 100vh;\r\n}\r\nth.mat-header-cell[_ngcontent-%COMP%] {\r\n  text-align: center;\r\n}\r\nmat-spinner[_ngcontent-%COMP%] {\r\n    margin: 0 auto;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ybGQtc3RhdGlzdGljcy93b3JsZC1zdGF0aXN0aWNzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0FBQ2Y7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUNBO0lBQ0ksY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL3dvcmxkLXN0YXRpc3RpY3Mvd29ybGQtc3RhdGlzdGljcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXRhYi1ncm91cCB7XHJcbiAgaGVpZ2h0OiAxMDB2aDtcclxufVxyXG50aC5tYXQtaGVhZGVyLWNlbGwge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5tYXQtc3Bpbm5lciB7XHJcbiAgICBtYXJnaW46IDAgYXV0bztcclxufSJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.mobile && ctx.continentsData);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _footer_footer_component__WEBPACK_IMPORTED_MODULE_6__["FooterComponent"], _angular_material_progress_spinner__WEBPACK_IMPORTED_MODULE_7__["MatSpinner"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabGroup"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTab"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabLabel"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTable"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSort"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatColumnDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCellDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRowDef"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderCell"], _angular_material_sort__WEBPACK_IMPORTED_MODULE_1__["MatSortHeader"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatCell"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatHeaderRow"], _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatRow"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInput"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatAccordion"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatExpansionPanel"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatExpansionPanelHeader"], _angular_material_expansion__WEBPACK_IMPORTED_MODULE_11__["MatExpansionPanelTitle"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DatePipe"], _shared_utils_render_long_numbers_pipe__WEBPACK_IMPORTED_MODULE_12__["RenderLongNumbersPipe"]], styles: ["mat-tab-group[_ngcontent-%COMP%] {\n  height: 100vh;\n}\nth.mat-header-cell[_ngcontent-%COMP%] {\n  text-align: center;\n}\nmat-spinner[_ngcontent-%COMP%] {\n    margin: 0 auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd29ybGQtc3RhdGlzdGljcy93b3JsZC1zdGF0aXN0aWNzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0FBQ2Y7QUFDQTtFQUNFLGtCQUFrQjtBQUNwQjtBQUNBO0lBQ0ksY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL3dvcmxkLXN0YXRpc3RpY3Mvd29ybGQtc3RhdGlzdGljcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LXRhYi1ncm91cCB7XG4gIGhlaWdodDogMTAwdmg7XG59XG50aC5tYXQtaGVhZGVyLWNlbGwge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5tYXQtc3Bpbm5lciB7XG4gICAgbWFyZ2luOiAwIGF1dG87XG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](WorldStatisticsComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -3230,7 +3296,7 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\catenate\Desktop\api\covid-stats\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/denise/Apps/covid-stats/src/main.ts */"./src/main.ts");
 
 
 /***/ })
