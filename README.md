@@ -9,7 +9,7 @@ The project is a SPA built using Angular 9
 It displays daily updated numbers about Covid-19 in the world  
 Here the used API [https://rapidapi.com/api-sports/api/covid-193](https://rapidapi.com/api-sports/api/covid-193)
 
-The project is published at the page [https://denisen90.github.io/covid-stats/](https://denisen90.github.io/covid-stats/)
+The project is published at the page [https://denisenanni.github.io/covid-stats/](https://denisenanni.github.io/covid-stats/)
 
 Still in development, contributions are welcomed
 
