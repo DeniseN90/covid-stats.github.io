@@ -45,7 +45,7 @@ Remember to change the property scipts.build:prod in the the file `package.json`
 
 Before running the application modify the file index.html:
 <!-- delete this line-->
-<!-- <base href="https://denisen90.github.io/covid-stats/" /> -->
+<!-- <base href="https://denisenanni.github.io/covid-stats/" /> -->
 <!-- uncomment this to run it locally -->
 <!-- <base href="/" /> -->
  
