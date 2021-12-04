@@ -4,6 +4,11 @@ div.container-fluid {
   flex-direction: column;
 }
 
+div.container-fluid.app {
+  padding: 0;
+  text-align: center;
+}
+
 main {
   flex: 1 0 auto;
 }
