@@ -2458,7 +2458,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "setTimeRange",
         value: function setTimeRange(timeRange) {
-          this.inputData = this.appService.countryStat.slice(0, timeRange);
+          this.inputData = this.appService.countryStat.slice(-timeRange);
           this.dataLabels = _shared_utils_charts_utils__WEBPACK_IMPORTED_MODULE_4__["ChartUtils"].getChartLabels(this.inputData);
         }
       }, {
