@@ -100,7 +100,7 @@ export class CountriesStatisticsComponent implements OnInit, AfterViewInit {
   }
 
   private setTimeRange(timeRange: number) {
-    this.inputData = this.appService.countryStat.slice(0, timeRange);
+    this.inputData = this.appService.countryStat.slice(- timeRange);
     this.dataLabels = ChartUtils.getChartLabels(this.inputData);
   }
 
