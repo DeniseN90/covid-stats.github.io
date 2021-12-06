@@ -6,7 +6,7 @@
     "clean": "rimraf ./docs",
     "start": "export NODE_OPTIONS=--openssl-legacy-provider; ng serve",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider; ng build",
-    "build:prod": "export NODE_OPTIONS=--openssl-legacy-provider; ng build --prod --base-href https://denisenanni.github.io/covid-stats/ --output-path docs",
+    "build:prod": "ng build --prod --base-href https://denisenanni.github.io/covid-stats/ --output-path docs",
     "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "test:watch": "ng test",
     "lint": "ng lint",
